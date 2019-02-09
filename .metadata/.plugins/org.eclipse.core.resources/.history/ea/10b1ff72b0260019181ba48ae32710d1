@@ -1,0 +1,15 @@
+import java.util.Arrays;
+import java.util.List;
+
+public class Client {
+
+	public static void main(String[] args) {
+		List<Integer> scores = Arrays.asList(80, 100, 120, 30);
+		ScoreRecord record = new ScoreRecord();
+		
+		record.attach(new AverageScore(record));
+		record.attach(new MinMaxScore(record));
+		
+		record.setScores(scores);
+	}
+}

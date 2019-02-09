@@ -1,0 +1,22 @@
+
+public class ScoreRecord implements Subject {
+
+	@Override
+	public void attach(Observer observer) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void detach(Observer observer) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void notifyObservers() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

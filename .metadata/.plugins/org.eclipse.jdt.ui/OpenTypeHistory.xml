@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=StrategePattern/src&lt;{Moving.java[Moving" modifiers="513" timestamp="1547804612593"/>
+<typeInfo handle="=StatePattern/src&lt;{State.java[State" modifiers="513" timestamp="1548166016360"/>
+<typeInfo handle="=ObserverPattern/src&lt;{Subject.java[Subject" modifiers="513" timestamp="1549084745553"/>
+<typeInfo handle="=ObserverPattern/D:\/Java\/jdk1.8.0_171\/jre\/lib\/rt.jar&lt;java.util(Observer.class[Observer" modifiers="1537" timestamp="1529501783021"/>
+<typeInfo handle="=ObserverPattern/src&lt;{Observer.java[Observer" modifiers="513" timestamp="1549086504291"/>
+<typeInfo handle="=DecoratorPattern/src&lt;{Display.java[Display" modifiers="1025" timestamp="1549524300234"/>
+<typeInfo handle="=DecoratorPattern/src&lt;{DisplayDecorator.java[DisplayDecorator" modifiers="1025" timestamp="1549523916313"/>
+</typeInfoHistroy>

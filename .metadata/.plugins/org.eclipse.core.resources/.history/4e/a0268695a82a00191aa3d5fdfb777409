@@ -1,0 +1,10 @@
+
+public abstract class DisplayDecorator extends Display {
+
+	@Override
+	public void draw() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,15 @@
+import java.util.List;
+
+public class MinMaxScore implements Observer {
+
+	public MinMaxScore(Subject subject) {
+		subject.attach(this);
+	}
+	
+	@Override
+	public void update(List<Integer> scores) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

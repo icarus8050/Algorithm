@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="E:\WorkSpace\Algorithm\Baekjoon_11726"/>
+			<item value="E:\WorkSpace\Algorithm\Baekjoon_1717"/>
+			<item value="E:\WorkSpace\Algorithm\Baekjoon_1929"/>
+			<item value="E:\WorkSpace\Algorithm\Baekjoon_2211"/>
+			<item value="E:\WorkSpace\Algorithm\Baekjoon_1753"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ajdt.wizards"/>
+			<item value="org.eclipse.ajdt.wizards/org.eclipse.ajdt.examples"/>
+			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
+		</list>
+	</section>
+</section>
