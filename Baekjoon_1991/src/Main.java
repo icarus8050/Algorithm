@@ -19,6 +19,7 @@ public class Main {
 		System.out.println();
 		tree.postorder(tree.root);
 		System.out.println();
+		br.close();
 	}
 }
 

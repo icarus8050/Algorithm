@@ -5,6 +5,10 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="E:\WorkSpace\Algorithm\Baekjoon_1991"/>
+			<item value="E:\WorkSpace\Algorithm\Baekjoon_1967"/>
+			<item value="E:\WorkSpace\Algorithm\Baekjoon_1931"/>
+			<item value="E:\WorkSpace\Algorithm\Baekjoon_1167"/>
 			<item value="E:\WorkSpace\Algorithm\Baekjoon_11726"/>
 			<item value="E:\WorkSpace\Algorithm\Baekjoon_1717"/>
 			<item value="E:\WorkSpace\Algorithm\Baekjoon_1929"/>
@@ -18,9 +22,10 @@
 	<section name="NewWizardAction">
 		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.ajdt.wizards"/>
-			<item value="org.eclipse.ajdt.wizards/org.eclipse.ajdt.examples"/>
 			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
+			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.jst.j2ee.internal"/>
+			<item value="org.eclipse.wst.jsdt.ui.java"/>
 		</list>
 	</section>
 </section>

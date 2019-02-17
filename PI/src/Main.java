@@ -16,6 +16,7 @@ public class Main {
 			dp = new int[pi.length()];
 			System.out.println(solve(0));
 		}
+		br.close();
 	}
 	
 	public static int solve(int begin) {

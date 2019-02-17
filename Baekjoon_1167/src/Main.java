@@ -40,6 +40,8 @@ public class Main {
 		diameter = 0;
 		dfs(farthest, 0);
 		System.out.println(diameter);
+		
+		br.close();
 	}
 	
 	public static void dfs(int node, int cost) {

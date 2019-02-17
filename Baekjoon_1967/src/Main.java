@@ -32,13 +32,14 @@ public class Main {
 		
 		dfs(1, 0);
 		Arrays.fill(visited, false);
-		diameter = 0;
+		diameter = 0; 
 		dfs(farthest, 0);
 		System.out.println(diameter);
+		br.close();
 	}
 	
 	public static void dfs(int node, int cost) {
-		if (visited[node]) return;
+		if (visited[node]) return;  
 		visited[node] = true;
 		
 		if (cost > diameter) {
