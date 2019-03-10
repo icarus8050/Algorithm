@@ -2925,3 +2925,1172 @@ org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException
 
 !ENTRY org.eclipse.jface.text 2 0 2019-02-28 13:36:07.539
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2019-02-28 18:35:02.565
+!MESSAGE Connection to https://spring.io/blog.atom failed on spring.io. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: spring.io
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2019-02-28 18:35:02.573
+!MESSAGE Connection to http://dist.springsource.com/release/STS/doc/updates.xml failed on dist.springsource.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: dist.springsource.com
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SESSION 2019-03-01 10:15:21.960 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2019-03-01 10:17:59.249
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-03-01 10:17:59.249
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-01 10:18:07.268
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-01 10:18:07.528
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2019-03-01 10:18:07.788
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-01 10:18:07.788
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5168f69d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6c6a7553,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 12 2019-03-01 10:18:25.640
+!MESSAGE Unable to parse pattern: ‘*’. ; version: 2.0.7.v20170906-1327
+!STACK 0
+org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException
+	at org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException.newTrace(Logs.java:387)
+	at org.eclipse.epp.logging.aeri.core.util.Logs.log(Logs.java:134)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConfiguration.getIgnoredPluginMessagesPatterns(ServerConfiguration.java:333)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:168)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-01 10:18:26.031
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Leafy'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-01 10:24:03.125
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-01 10:24:03.130
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-01 10:24:37.609
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-01 10:24:37.616
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface 2 0 2019-03-01 10:32:35.030
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-01 10:32:35.030
+!MESSAGE A conflict occurred for CTRL+R:
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.RunToLine,Run to Line,
+		Resume and break when execution reaches the current line,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@52ce0d2d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.springframework.ide.eclipse.boot.restart.commands.restart,Trigger Restart,
+		Restart Spring Boot Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1304f65b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2019-03-01 10:52:25.275
+!MESSAGE No repository found at http://download.springsource.com/release/TOOLS/update/e4.7/.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2019-03-01 12:27:45.159
+!MESSAGE Connection to https://spring.io/blog.atom failed on spring.io. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: spring.io
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2019-03-01 12:27:45.499
+!MESSAGE Connection to http://dist.springsource.com/release/STS/doc/updates.xml failed on dist.springsource.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: dist.springsource.com
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SESSION 2019-03-01 22:26:46.625 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2019-03-01 22:32:01.468
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-03-01 22:32:01.468
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-01 22:32:08.652
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2019-03-01 22:32:09.965
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-01 22:32:09.965
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6b29771f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4f991f00,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 12 2019-03-01 22:32:26.798
+!MESSAGE Unable to parse pattern: ‘*’. ; version: 2.0.7.v20170906-1327
+!STACK 0
+org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException
+	at org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException.newTrace(Logs.java:387)
+	at org.eclipse.epp.logging.aeri.core.util.Logs.log(Logs.java:134)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConfiguration.getIgnoredPluginMessagesPatterns(ServerConfiguration.java:333)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:168)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-01 22:32:27.379
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Leafy'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-01 22:39:45.771
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-01 22:39:45.779
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-01 22:40:30.204
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-01 22:40:30.212
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2019-03-01 23:06:22.925
+!MESSAGE No repository found at http://download.springsource.com/release/TOOLS/update/e4.7/.
+!SESSION 2019-03-02 10:55:33.013 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2019-03-02 11:43:41.321
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-03-02 11:43:41.321
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-02 11:43:48.905
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2019-03-02 11:43:50.458
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-02 11:43:50.459
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2e02cc02,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@524a96f5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 12 2019-03-02 11:44:07.964
+!MESSAGE Unable to parse pattern: ‘*’. ; version: 2.0.7.v20170906-1327
+!STACK 0
+org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException
+	at org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException.newTrace(Logs.java:387)
+	at org.eclipse.epp.logging.aeri.core.util.Logs.log(Logs.java:134)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConfiguration.getIgnoredPluginMessagesPatterns(ServerConfiguration.java:333)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:168)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-02 11:44:08.237
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Leafy'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-02 12:17:17.459
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-02 12:17:17.465
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-02 12:17:52.974
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-02 12:17:52.982
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2019-03-02 12:44:17.785
+!MESSAGE No repository found at http://download.springsource.com/release/TOOLS/update/e4.7/.
+
+!ENTRY org.eclipse.jface 2 0 2019-03-02 17:11:56.140
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-02 17:11:56.140
+!MESSAGE A conflict occurred for CTRL+R:
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.RunToLine,Run to Line,
+		Resume and break when execution reaches the current line,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5aaa2e90,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.springframework.ide.eclipse.boot.restart.commands.restart,Trigger Restart,
+		Restart Spring Boot Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3a7af4eb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+!SESSION 2019-03-03 08:09:25.452 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2019-03-03 08:25:57.086
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-03-03 08:25:57.086
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-03 08:26:04.700
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2019-03-03 08:26:05.248
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-03 08:26:05.248
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@524a96f5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@72fb922c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 12 2019-03-03 08:26:22.833
+!MESSAGE Unable to parse pattern: ‘*’. ; version: 2.0.7.v20170906-1327
+!STACK 0
+org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException
+	at org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException.newTrace(Logs.java:387)
+	at org.eclipse.epp.logging.aeri.core.util.Logs.log(Logs.java:134)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConfiguration.getIgnoredPluginMessagesPatterns(ServerConfiguration.java:333)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:168)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-03 08:26:23.439
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Leafy'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-03 08:31:13.136
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-03 08:31:13.142
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-03 08:31:51.229
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-03 08:31:51.235
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2019-03-03 09:04:26.910
+!MESSAGE No repository found at http://download.springsource.com/release/TOOLS/update/e4.7/.
+
+!ENTRY org.eclipse.jface 2 0 2019-03-03 23:58:01.928
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-03 23:58:01.928
+!MESSAGE A conflict occurred for CTRL+R:
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.RunToLine,Run to Line,
+		Resume and break when execution reaches the current line,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7f558069,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.springframework.ide.eclipse.boot.restart.commands.restart,Trigger Restart,
+		Restart Spring Boot Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@32e8ddc5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+!SESSION 2019-03-04 09:51:40.989 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2019-03-04 09:53:18.934
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-03-04 09:53:18.934
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-04 09:53:26.509
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2019-03-04 09:53:28.164
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-04 09:53:28.164
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4dc74211,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4bbc9862,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-04 09:53:46.537
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Leafy'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 12 2019-03-04 09:53:47.534
+!MESSAGE Unable to parse pattern: ‘*’. ; version: 2.0.7.v20170906-1327
+!STACK 0
+org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException
+	at org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException.newTrace(Logs.java:387)
+	at org.eclipse.epp.logging.aeri.core.util.Logs.log(Logs.java:134)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConfiguration.getIgnoredPluginMessagesPatterns(ServerConfiguration.java:333)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:168)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2019-03-04 10:08:09.255
+!MESSAGE No repository found at http://download.springsource.com/release/TOOLS/update/e4.7/.
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-04 10:20:40.815
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-04 10:20:40.821
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-04 10:21:17.237
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-04 10:21:17.243
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface 2 0 2019-03-04 12:17:38.405
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-04 12:17:38.405
+!MESSAGE A conflict occurred for CTRL+R:
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.RunToLine,Run to Line,
+		Resume and break when execution reaches the current line,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6a2f9e66,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.springframework.ide.eclipse.boot.restart.commands.restart,Trigger Restart,
+		Restart Spring Boot Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@69b0c629,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+!SESSION 2019-03-05 07:09:19.520 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2019-03-05 07:17:54.194
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-03-05 07:17:54.194
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-05 07:18:02.525
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2019-03-05 07:18:03.125
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-05 07:18:03.125
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2e02cc02,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@524a96f5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 12 2019-03-05 07:18:20.088
+!MESSAGE Unable to parse pattern: ‘*’. ; version: 2.0.7.v20170906-1327
+!STACK 0
+org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException
+	at org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException.newTrace(Logs.java:387)
+	at org.eclipse.epp.logging.aeri.core.util.Logs.log(Logs.java:134)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConfiguration.getIgnoredPluginMessagesPatterns(ServerConfiguration.java:333)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:168)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-05 07:18:21.323
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Leafy'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2019-03-05 07:58:50.085
+!MESSAGE No repository found at http://download.springsource.com/release/TOOLS/update/e4.7/.
+!SESSION 2019-03-05 18:28:57.599 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2019-03-05 18:34:42.186
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-03-05 18:34:42.186
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-05 18:34:49.879
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-05 18:34:50.982
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2019-03-05 18:34:51.291
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-05 18:34:51.291
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@33fa6a8b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@513f8279,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 12 2019-03-05 18:35:11.233
+!MESSAGE Unable to parse pattern: ‘*’. ; version: 2.0.7.v20170906-1327
+!STACK 0
+org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException
+	at org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException.newTrace(Logs.java:387)
+	at org.eclipse.epp.logging.aeri.core.util.Logs.log(Logs.java:134)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConfiguration.getIgnoredPluginMessagesPatterns(ServerConfiguration.java:333)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:168)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-05 18:35:11.315
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Leafy'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2019-03-05 19:05:33.748
+!MESSAGE No repository found at http://download.springsource.com/release/TOOLS/update/e4.7/.
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-05 19:12:53.242
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-05 19:12:53.248
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-05 23:16:24.702
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-05 23:16:24.708
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface 2 0 2019-03-05 23:36:46.991
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-05 23:36:46.991
+!MESSAGE A conflict occurred for CTRL+R:
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.RunToLine,Run to Line,
+		Resume and break when execution reaches the current line,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2d5be3d7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.springframework.ide.eclipse.boot.restart.commands.restart,Trigger Restart,
+		Restart Spring Boot Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@34d5c240,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+!SESSION 2019-03-06 10:09:49.700 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2019-03-06 10:13:51.580
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-03-06 10:13:51.581
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-06 10:13:58.723
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-06 10:13:59.692
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2019-03-06 10:14:00.006
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-06 10:14:00.006
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4e38b4ea,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@eb8d539,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 12 2019-03-06 10:14:16.184
+!MESSAGE Unable to parse pattern: ‘*’. ; version: 2.0.7.v20170906-1327
+!STACK 0
+org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException
+	at org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException.newTrace(Logs.java:387)
+	at org.eclipse.epp.logging.aeri.core.util.Logs.log(Logs.java:134)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConfiguration.getIgnoredPluginMessagesPatterns(ServerConfiguration.java:333)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:168)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-06 10:14:17.263
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Leafy'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-06 11:43:18.951
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-06 11:43:18.956
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-06 11:44:03.555
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-06 11:44:03.562
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2019-03-07 09:16:58.578 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2019-03-07 09:19:33.904
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-03-07 09:19:33.904
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-07 09:19:40.639
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2019-03-07 09:19:42.044
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-07 09:19:42.044
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1db077a4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@75c90ec5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 12 2019-03-07 09:19:58.485
+!MESSAGE Unable to parse pattern: ‘*’. ; version: 2.0.7.v20170906-1327
+!STACK 0
+org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException
+	at org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException.newTrace(Logs.java:387)
+	at org.eclipse.epp.logging.aeri.core.util.Logs.log(Logs.java:134)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConfiguration.getIgnoredPluginMessagesPatterns(ServerConfiguration.java:333)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:168)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-07 09:19:59.140
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Leafy'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-07 09:45:17.554
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-07 09:45:17.559
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-07 09:45:58.923
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-07 09:45:58.928
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface 2 0 2019-03-07 10:08:59.520
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-07 10:08:59.520
+!MESSAGE A conflict occurred for CTRL+R:
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.RunToLine,Run to Line,
+		Resume and break when execution reaches the current line,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ca6685e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.springframework.ide.eclipse.boot.restart.commands.restart,Trigger Restart,
+		Restart Spring Boot Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@731f4bcb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+!SESSION 2019-03-07 23:17:20.012 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2019-03-07 23:19:57.360
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-03-07 23:19:57.360
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-07 23:20:04.591
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-07 23:20:05.626
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2019-03-07 23:20:06.053
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-07 23:20:06.053
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4cef1ea6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3f2731e5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-07 23:20:24.551
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Leafy'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 12 2019-03-07 23:20:25.640
+!MESSAGE Unable to parse pattern: ‘*’. ; version: 2.0.7.v20170906-1327
+!STACK 0
+org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException
+	at org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException.newTrace(Logs.java:387)
+	at org.eclipse.epp.logging.aeri.core.util.Logs.log(Logs.java:134)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConfiguration.getIgnoredPluginMessagesPatterns(ServerConfiguration.java:333)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:168)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-07 23:25:45.234
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-07 23:25:45.241
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-07 23:26:13.763
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-07 23:26:13.769
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2019-03-08 08:20:35.933 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2019-03-08 08:51:03.673
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-03-08 08:51:03.673
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-08 08:51:11.228
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-08 08:51:11.529
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2019-03-08 08:51:11.791
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-08 08:51:11.791
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6a636c62,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5e4d55a6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 12 2019-03-08 08:51:27.820
+!MESSAGE Unable to parse pattern: ‘*’. ; version: 2.0.7.v20170906-1327
+!STACK 0
+org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException
+	at org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException.newTrace(Logs.java:387)
+	at org.eclipse.epp.logging.aeri.core.util.Logs.log(Logs.java:134)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConfiguration.getIgnoredPluginMessagesPatterns(ServerConfiguration.java:333)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:168)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-08 08:51:29.447
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Leafy'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-08 10:09:46.679
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-08 10:09:46.684
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-08 10:10:18.537
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-08 10:10:18.546
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface 2 0 2019-03-08 14:57:19.221
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-08 14:57:19.221
+!MESSAGE A conflict occurred for CTRL+R:
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.RunToLine,Run to Line,
+		Resume and break when execution reaches the current line,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@50685913,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.springframework.ide.eclipse.boot.restart.commands.restart,Trigger Restart,
+		Restart Spring Boot Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6087f7bd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+!SESSION 2019-03-09 07:36:49.140 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2019-03-09 07:39:22.106
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-03-09 07:39:22.107
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-09 07:39:30.333
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-09 07:39:30.636
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2019-03-09 07:39:30.898
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-09 07:39:30.898
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@22938166,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@72bb3f3e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 12 2019-03-09 07:39:47.453
+!MESSAGE Unable to parse pattern: ‘*’. ; version: 2.0.7.v20170906-1327
+!STACK 0
+org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException
+	at org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException.newTrace(Logs.java:387)
+	at org.eclipse.epp.logging.aeri.core.util.Logs.log(Logs.java:134)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConfiguration.getIgnoredPluginMessagesPatterns(ServerConfiguration.java:333)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:168)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-09 07:39:48.529
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Leafy'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-09 08:43:37.620
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-09 08:43:37.626
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-09 08:44:30.443
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-09 08:44:30.448
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface 2 0 2019-03-09 19:18:53.442
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-09 19:18:53.442
+!MESSAGE A conflict occurred for CTRL+R:
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.RunToLine,Run to Line,
+		Resume and break when execution reaches the current line,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@69b6826b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.springframework.ide.eclipse.boot.restart.commands.restart,Trigger Restart,
+		Restart Spring Boot Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@195b6549,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+!SESSION 2019-03-10 09:13:16.795 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2019-03-10 09:18:54.477
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-03-10 09:18:54.477
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-10 09:19:02.511
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2019-03-10 09:19:02.786
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2019-03-10 09:19:03.070
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-10 09:19:03.070
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@b4f7e1c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6258ea84,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 12 2019-03-10 09:19:20.299
+!MESSAGE Unable to parse pattern: ‘*’. ; version: 2.0.7.v20170906-1327
+!STACK 0
+org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException
+	at org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException.newTrace(Logs.java:387)
+	at org.eclipse.epp.logging.aeri.core.util.Logs.log(Logs.java:134)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConfiguration.getIgnoredPluginMessagesPatterns(ServerConfiguration.java:333)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:168)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-10 09:19:20.522
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Leafy'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-10 10:35:21.272
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-10 10:35:21.277
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-10 10:38:23.425
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-03-10 10:38:23.431
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
