@@ -5,7 +5,56 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2019-03-13T06:13:00Z</updated>
+  <updated>2019-03-15T00:00:00Z</updated>
+  <entry>
+    <title>A Bootiful Podcast: Spring Security engineer and OAuth slayer Joe Grandja</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/03/15/a-bootiful-podcast-spring-security-engineer-and-oauth-slayer-joe-grandja" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2019-03-14:3603</id>
+    <updated>2019-03-15T00:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another installment of a Bootiful Podcast! This week &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to &lt;a href="https://twitter.com/joegrandja"&gt;Joe Grandja (@joegrandja)&lt;/a&gt; who, not coincidentally, just celebrated his third anniversary working on the Spring team! Joe has been instrumental in building Spring Security 5.x and its OAuth client and resource-server support.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://spring.io/team/pivotal-joe-grandja"&gt;Joe&amp;rsquo;s team page&lt;/a&gt;&lt;br/&gt;&lt;a href="http://twitter.com/joe_grandja"&gt;Joe on Twitter&lt;/a&gt;&lt;br/&gt;&lt;a href="https://twitter.com/rob_winch/status/1106194606058815490"&gt;Joe just celebrated his third year on the team!&lt;/a&gt;&lt;/p&gt;
+&lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/589977558%3Fsecret_token%3Ds-GoINo&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Tips: Be Lazy AND Fast with Spring Boot 2.2.M1!</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/03/14/spring-tips-be-lazy-and-fast-with-spring-boot-2-2-m1" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2019-03-14:3604</id>
+    <updated>2019-03-14T15:38:38Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to a super quick, intra-season interregnum installment of Spring Tips in which we look at a few features that let you be both lazy AND fast in Spring Boot 2.2! &lt;/p&gt;
+&lt;p&gt;speaker: Josh Long&lt;br/&gt;&lt;a href="http://twitter.com/starbuxman"&gt;@starbuxman&lt;/a&gt;&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/_m4xpHUf55E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>Lazy Initialization in Spring Boot 2.2</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/03/14/lazy-initialization-in-spring-boot-2-2" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Andy Wilkinson</name>
+    </author>
+    <id>tag:spring.io,2019-03-08:3601</id>
+    <updated>2019-03-14T11:59:00Z</updated>
+    <content type="html">&lt;p&gt;The &lt;a href="https://spring.io/blog/2019/03/08/spring-boot-2-2-m1"&gt;recently announced&lt;/a&gt; first milestone of Spring Boot 2.2 introduces support for lazy initialization. This post describes the new functionality and explains how and when to enable it.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-does-it-mean-to-be-lazy" class="anchor" name="what-does-it-mean-to-be-lazy"&gt;&lt;/a&gt;What Does it Mean to be Lazy?&lt;/h2&gt;
+&lt;p&gt;Spring Framework has had support for lazy bean initialization since before its source code moved to Git 11 years ago. By default, when an application context is being refreshed, every bean in the context is created and its dependencies are injected. By contrast, when a bean definition is configured to be initialized lazily it will not be created and its dependencies will not be injected until it&amp;rsquo;s needed.&lt;/p&gt;&lt;h2&gt;&lt;a href="#enabling-lazy-initialization" class="anchor" name="enabling-lazy-initialization"&gt;&lt;/a&gt;Enabling Lazy Initialization&lt;/h2&gt;
+&lt;p&gt;It&amp;rsquo;s possible to enable lazy initialization in any version of Spring Boot if you&amp;rsquo;re happy to get your hands dirty and write a &lt;code&gt;BeanFactoryPostProcessor&lt;/code&gt;. Spring Boot 2.2 just makes it easier via the introduction of a new property, &lt;code&gt;spring.main.lazy-initialization&lt;/code&gt; (there are also equivalent methods on both &lt;code&gt;SpringApplication&lt;/code&gt; and &lt;code&gt;SpringApplicationBuilder&lt;/code&gt;). When set to &lt;code&gt;true&lt;/code&gt;, bean definitions in the application will be configured to use lazy initialization.&lt;/p&gt;&lt;h2&gt;&lt;a href="#benefits-of-lazy-initialization" class="anchor" name="benefits-of-lazy-initialization"&gt;&lt;/a&gt;Benefits of Lazy Initialization&lt;/h2&gt;
+&lt;p&gt;Lazy initialization can result in significantly reduced startup times as fewer classes are loaded and fewer beans are created during application startup. For example, a small web application that&amp;rsquo;s using Actuator and Spring Security that normally starts in 2500ms will start in 2000ms with lazy initialization enabled. The exact improvement will vary from application to application depending on the structure of their beans&amp;rsquo; dependency graphs.&lt;/p&gt;&lt;h3&gt;&lt;a href="#what-about-devtools" class="anchor" name="what-about-devtools"&gt;&lt;/a&gt;What About DevTools?&lt;/h3&gt;
+&lt;p&gt;Spring Boot&amp;rsquo;s DevTools already provide a significant boost to developer productivity. Rather than having to restart the JVM and the application each time you want to try out a change, DevTools enables hot restart of your application in the same JVM. A significant benefit of hot restart is that it gives the JIT more of a chance to optimise the code involved in starting your application. After a few restarts, the original time of 2500ms is reduced by almost 80% to nearer 500ms. With lazy initialization, we can do even better. Setting &lt;code&gt;spring.main.lazy-initialization&lt;/code&gt; sees our application restart in 400ms directly in the IDE.&lt;/p&gt;&lt;h2&gt;&lt;a href="#downsides-of-lazy-initialization" class="anchor" name="downsides-of-lazy-initialization"&gt;&lt;/a&gt;Downsides of Lazy Initialization&lt;/h2&gt;
+&lt;p&gt;As we&amp;rsquo;ve seen above, enabling lazy initialization can reduce startup times quite dramatically. You may be tempted to enable it all the time or be wondering why we didn&amp;rsquo;t decide to enable it by default. There are a few downsides to lazy initialization that mean we believe it&amp;rsquo;s better to opt-in once you have decided it makes sense to do so.&lt;/p&gt;
+&lt;p&gt;Due to classes no longer being loaded and beans no longer being created until they&amp;rsquo;re needed, it&amp;rsquo;s possible for lazy initialization to mask a problem that previously would have been identified at startup. Such problems can include no class def found errors, out of memory errors, and failures due to misconfiguration.&lt;/p&gt;
+&lt;p&gt;In a web application lazy initialization can lead to increased latency for HTTP requests that trigger bean initialization. This will typically just be the first request but it may have an adverse effect on load-balancing and auto-scaling.&lt;/p&gt;&lt;h2&gt;&lt;a href="#is-this-thing-switched-on" class="anchor" name="is-this-thing-switched-on"&gt;&lt;/a&gt;Is This Thing Switched On?&lt;/h2&gt;
+&lt;p&gt;If you&amp;rsquo;re not sure what effect lazy initialization is having on your application, or you&amp;rsquo;d like to verify that another framework&amp;rsquo;s behaviour meets your needs and matches their claims, it can be informative to use the debugger. By placing a breakpoint in the constructor of one of your beans you can see when it is being initialized. For example, in a Spring Boot web application with lazy initialization enabled you&amp;rsquo;ll see that &lt;code&gt;@Controller&lt;/code&gt; beans are not created until the first request is made to Spring MVC&amp;rsquo;s &lt;code&gt;DispatcherServlet&lt;/code&gt; or Spring WebFlux&amp;rsquo;s &lt;code&gt;DispatcherHandler&lt;/code&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#when-to-enable-lazy-initialization" class="anchor" name="when-to-enable-lazy-initialization"&gt;&lt;/a&gt;When to Enable Lazy Initialization&lt;/h2&gt;
+&lt;p&gt;As we&amp;rsquo;ve seen above, lazy initialization can offer significant improvements in start up time but there are some notable downsides too and it&amp;rsquo;s important to enable it with care.&lt;/p&gt;
+&lt;p&gt;One area where lazy initialization can be highly beneficial with few, if any, downsides is during development. As you&amp;rsquo;re iterating on an application, the reduced startup times offered by lazy initialization and DevTools&amp;rsquo; hot restarts can dramatically improve your productivity.&lt;/p&gt;
+&lt;p&gt;Another area that can benefit from lazy initialization is your application&amp;rsquo;s integration tests. You may already be using Spring Boot&amp;rsquo;s test slices to reduce test execution time by limiting the number of beans that are initialized in certain types of tests. Lazy initialization provides an alternative mechanism to achieve a similar end result. If you&amp;rsquo;re not in a position to structure your application such that it&amp;rsquo;s amenable to test slicing, or if there isn&amp;rsquo;t a slice available for a particular type of test, enabling lazy initialization will limit the beans that are initialized to those that are needed by the test. This will reduce test execution time, particularly when running a test in isolation during development.&lt;/p&gt;
+&lt;p&gt;Lastly, you may want to consider enabling lazy initialization in production. If you do so, it should be done with care. For web applications, container orchestration may benefit from a &lt;code&gt;/health&lt;/code&gt; endpoint that is able to respond more quickly, but you also need to be aware of the potential for increased latency when the first request is made to one of the application&amp;rsquo;s own endpoints. You should also take care to size your application&amp;rsquo;s JVM with lazy initialization disabled to avoid any unwanted out of memory errors once all of its components have been used.&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - March 12th, 2019</title>
     <link rel="alternate" href="https://spring.io/blog/2019/03/13/this-week-in-spring-march-12th-2019" />
@@ -1423,386 +1472,5 @@ public FilterRegistrationBean&amp;lt;ForwardedHeaderFilter&amp;gt; forwardedHead
   &lt;li&gt;&lt;a href="https://github.com/spring-cloud-samples/spring-cloud-contract-samples/commit/2be798bb8d907bcf91771400f4834b079c4549bb"&gt;The 2.1.0.RELEASE of Spring Cloud Contract (Greenwich.RELEASE release train) supports binary payloads. Here you can find a commit that adds a sample of how you can use it&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Yet another nice post on the Okta blog, this one on adding &lt;a href="https://developer.okta.com/blog/2019/02/19/add-social-login-to-spring-boot"&gt;social login to Your JHipster App&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Finchley.SR3 Now Available</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/02/26/spring-cloud-finchley-sr3-now-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Ryan Baxter</name>
-    </author>
-    <id>tag:spring.io,2019-02-25:3575</id>
-    <updated>2019-02-26T15:42:20Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the community, I am pleased to announce that the Service Release 3 (SR3) of the &lt;a href="https://cloud.spring.io"&gt;Spring Cloud Finchley&lt;/a&gt; Release Train is available today. The release can be found in &lt;a href="http://repo1.maven.org/maven2/org/springframework/cloud/spring-cloud-dependencies/Finchley.SR3/"&gt;Maven Central&lt;/a&gt;. You can check out the Finchley &lt;a href="https://github.com/spring-projects/spring-cloud/wiki/Spring-Cloud-Finchley-Release-Notes"&gt;release notes for more information&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#notable-changes-in-the-finchley-release-train" class="anchor" name="notable-changes-in-the-finchley-release-train"&gt;&lt;/a&gt;Notable Changes in the Finchley Release Train&lt;/h2&gt;&lt;h3&gt;&lt;a href="#spring-cloud-config" class="anchor" name="spring-cloud-config"&gt;&lt;/a&gt;Spring Cloud Config&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Cloud Config server now honors the &lt;code&gt;if-modified-since&lt;/code&gt; header in requests before&lt;br/&gt;retrieving data and returns &lt;code&gt;last-modified&lt;/code&gt; header in response&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-config/milestone/57?closed=1"&gt;Issues&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-stream" class="anchor" name="spring-cloud-stream"&gt;&lt;/a&gt;Spring Cloud Stream&lt;/h3&gt;
-&lt;p&gt;*&lt;a href="https://github.com/spring-cloud/spring-cloud-stream-starters/releases/tag/vElmhurst.SR2"&gt;Elmhurst.SR2 Release&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-sleuth" class="anchor" name="spring-cloud-sleuth"&gt;&lt;/a&gt;Spring Cloud Sleuth&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-sleuth/milestone/60?closed=1"&gt;Issues&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-zookeeper" class="anchor" name="spring-cloud-zookeeper"&gt;&lt;/a&gt;Spring Cloud Zookeeper&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-zookeeper/milestone/25?closed=1"&gt;Issues&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-aws" class="anchor" name="spring-cloud-aws"&gt;&lt;/a&gt;Spring Cloud Aws&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-aws/milestone/25?closed=1"&gt;Issues&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-task" class="anchor" name="spring-cloud-task"&gt;&lt;/a&gt;Spring Cloud Task&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Dependency Upgrades&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-task/issues?q=is%3Aissue+label%3A2.0.1.RELEASE+is%3Aclosed"&gt;Issues&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-commons" class="anchor" name="spring-cloud-commons"&gt;&lt;/a&gt;Spring Cloud Commons&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-commons/milestone/55?closed=1"&gt;Issues&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-openfeign" class="anchor" name="spring-cloud-openfeign"&gt;&lt;/a&gt;Spring Cloud OpenFeign&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-openfeign/milestone/8?closed=1"&gt;Issues&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-vault" class="anchor" name="spring-cloud-vault"&gt;&lt;/a&gt;Spring Cloud Vault&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Dependency Upgrades&lt;/li&gt;
-  &lt;li&gt;Documentation Refinements&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-vault/milestone/26?closed=1"&gt;Issues&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-bus" class="anchor" name="spring-cloud-bus"&gt;&lt;/a&gt;Spring Cloud Bus&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-bus/milestone/33?closed=1"&gt;Issues&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-contract" class="anchor" name="spring-cloud-contract"&gt;&lt;/a&gt;Spring Cloud Contract&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-contract/milestone/44?closed=1"&gt;Issues&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-consul" class="anchor" name="spring-cloud-consul"&gt;&lt;/a&gt;Spring Cloud Consul&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;spring.cloud.discovery.enabled=false&lt;/code&gt; now behaves the same as &lt;code&gt;spring.cloud.consul.discovery.enabled=false&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-consul/milestone/36?closed=1"&gt;Issues&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-gateway" class="anchor" name="spring-cloud-gateway"&gt;&lt;/a&gt;Spring Cloud Gateway&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Better error handling when Ribbon is not on the classpath&lt;/li&gt;
-  &lt;li&gt;Performance improvements in routing of HTTP and Websocket requests&lt;/li&gt;
-  &lt;li&gt;Performance improvements when using modify request body filter&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-gateway/milestone/19?closed=1"&gt;Issues&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-netflix" class="anchor" name="spring-cloud-netflix"&gt;&lt;/a&gt;Spring Cloud Netflix&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;HystrixConcurrencyStrategy&lt;/code&gt; can now be set using &lt;code&gt;HystrixPlugins#getConcurrencyStrategy&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;spring.cloud.discovery.enabled=false&lt;/code&gt; now behaves the same as &lt;code&gt;eureka.client.enabled=false&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-netflix/milestone/72?closed=1"&gt;Issues&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The following modules were updated as part of Finchley.SR3:&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Module &lt;/th&gt;
-      &lt;th&gt;Version &lt;/th&gt;
-      &lt;th&gt;Issues&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Config &lt;/td&gt;
-      &lt;td&gt;2.0.3.RELEASE &lt;/td&gt;
-      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-config/milestone/57?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Function &lt;/td&gt;
-      &lt;td&gt;1.0.0.RELEASE &lt;/td&gt;
-      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-function/milestone/7?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Stream &lt;/td&gt;
-      &lt;td&gt;Elmhurst.SR2 &lt;/td&gt;
-      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Sleuth &lt;/td&gt;
-      &lt;td&gt;2.0.3.RELEASE &lt;/td&gt;
-      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-sleuth/milestone/60?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Cloudfoundry &lt;/td&gt;
-      &lt;td&gt;2.0.1.RELEASE &lt;/td&gt;
-      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-cloudfoundry/milestone/10?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Zookeeper &lt;/td&gt;
-      &lt;td&gt;2.0.1.RELEASE &lt;/td&gt;
-      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-zookeeper/milestone/25?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Aws &lt;/td&gt;
-      &lt;td&gt;2.0.2.RELEASE &lt;/td&gt;
-      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-aws/milestone/25?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Task &lt;/td&gt;
-      &lt;td&gt;2.0.1.RELEASE &lt;/td&gt;
-      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Commons &lt;/td&gt;
-      &lt;td&gt;2.0.3.RELEASE &lt;/td&gt;
-      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-commons/milestone/55?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Openfeign &lt;/td&gt;
-      &lt;td&gt;2.0.3.RELEASE &lt;/td&gt;
-      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-openfeign/milestone/8?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Vault &lt;/td&gt;
-      &lt;td&gt;2.0.3.RELEASE &lt;/td&gt;
-      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-vault/milestone/26?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Security &lt;/td&gt;
-      &lt;td&gt;2.0.1.RELEASE &lt;/td&gt;
-      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Bus &lt;/td&gt;
-      &lt;td&gt;2.0.1.RELEASE &lt;/td&gt;
-      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-bus/milestone/33?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Contract &lt;/td&gt;
-      &lt;td&gt;2.0.3.RELEASE &lt;/td&gt;
-      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-contract/milestone/44?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Consul &lt;/td&gt;
-      &lt;td&gt;2.0.2.RELEASE &lt;/td&gt;
-      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-consul/milestone/36?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Gateway &lt;/td&gt;
-      &lt;td&gt;2.0.3.RELEASE &lt;/td&gt;
-      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-gateway/milestone/19?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Dependencies &lt;/td&gt;
-      &lt;td&gt;Finchley.SR3 &lt;/td&gt;
-      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Netflix &lt;/td&gt;
-      &lt;td&gt;2.0.3.RELEASE &lt;/td&gt;
-      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-netflix/milestone/72?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;As always, we welcome feedback on &lt;a href="https://github.com/spring-cloud/"&gt;GitHub&lt;/a&gt;, on &lt;a href="https://gitter.im/spring-cloud/spring-cloud"&gt;Gitter&lt;/a&gt;, on &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud"&gt;Stack Overflow&lt;/a&gt;, or on &lt;a href="https://twitter.com/SpringCloud"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;To get started with Maven with a BOM (dependency management only):&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;&lt;br/&gt;&amp;lt;dependencyManagement&amp;gt;&#xD;
-    &amp;lt;dependencies&amp;gt;&#xD;
-        &amp;lt;dependency&amp;gt;&#xD;
-            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
-            &amp;lt;artifactId&amp;gt;spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;&#xD;
-            &amp;lt;version&amp;gt;Finchley.SR3&amp;lt;/version&amp;gt;&#xD;
-            &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;&#xD;
-            &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;&#xD;
-        &amp;lt;/dependency&amp;gt;&#xD;
-    &amp;lt;/dependencies&amp;gt;&#xD;
-&amp;lt;/dependencyManagement&amp;gt;&#xD;
-&amp;lt;dependencies&amp;gt;&#xD;
-    &amp;lt;dependency&amp;gt;&#xD;
-        &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
-        &amp;lt;artifactId&amp;gt;spring-cloud-starter-config&amp;lt;/artifactId&amp;gt;&#xD;
-    &amp;lt;/dependency&amp;gt;&#xD;
-    &amp;lt;dependency&amp;gt;&#xD;
-        &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
-        &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-eureka-client&amp;lt;/artifactId&amp;gt;&#xD;
-    &amp;lt;/dependency&amp;gt;&#xD;
-    ...&#xD;
-&amp;lt;/dependencies&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;or with Gradle:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;buildscript {&#xD;
-    dependencies {&#xD;
-        classpath &amp;quot;io.spring.gradle:dependency-management-plugin:1.0.2.RELEASE&amp;quot;&#xD;
-    }&#xD;
-}&#xD;
-&#xD;
-&#xD;
-&#xD;
-apply plugin: &amp;quot;io.spring.dependency-management&amp;quot;&#xD;
-&#xD;
-dependencyManagement {&#xD;
-    imports {&#xD;
-        mavenBom &amp;#39;org.springframework.cloud:spring-cloud-dependencies:Finchley.SR3&amp;#39;&#xD;
-    }&#xD;
-}&#xD;
-&#xD;
-dependencies {&#xD;
-    compile &amp;#39;org.springframework.cloud:spring-cloud-starter-config&amp;#39;&#xD;
-    compile &amp;#39;org.springframework.cloud:spring-cloud-starter-netflix-eureka-client&amp;#39;&#xD;
-    ...&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Data Flow and Skipper 2.0 RC1 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/02/22/spring-cloud-data-flow-and-skipper-2-0-rc1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Mark Pollack</name>
-    </author>
-    <id>tag:spring.io,2019-02-22:3574</id>
-    <updated>2019-02-22T21:37:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;The &lt;a href="https://cloud.spring.io/spring-cloud-dataflow/"&gt;Spring Cloud Data Flow&lt;/a&gt; team is pleased to announce the release of &lt;code&gt;2.0 RC1&lt;/code&gt; of Data Flow.  Follow the &lt;em&gt;Getting Started&lt;/em&gt; guides for running on &lt;a href="https://docs.spring.io/spring-cloud-dataflow/docs/2.0.0.RC1/reference/htmlsingle/#getting-started-local"&gt;Local&lt;/a&gt;, &lt;a href="https://docs.spring.io/spring-cloud-dataflow/docs/2.0.0.RC1/reference/htmlsingle/#getting-started-cloudfoundry"&gt;Cloud Foundry&lt;/a&gt;, and &lt;a href="https://docs.spring.io/spring-cloud-dataflow/docs/2.0.0.RC1/reference/htmlsingle/#getting-started-kubernetes"&gt;Kubernetes&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Hand in hand is the &lt;code&gt;2.0 RC1&lt;/code&gt; release of &lt;a href="https://cloud.spring.io/spring-cloud-skipper/"&gt;Spring Cloud Skipper&lt;/a&gt;. The &lt;a href="https://docs.spring.io/spring-cloud-skipper/docs/2.0.0.RC1/reference/htmlsingle/#getting-started"&gt;getting started section&lt;/a&gt; in the reference guide is the best place to start if you want to use Skipper separately from Data Flow.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="here-are-the-highlights-for-data-flow"&gt;&lt;a class="anchor" href="#here-are-the-highlights-for-data-flow"&gt;&lt;/a&gt;Here are the highlights for Data Flow&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Revamped metrics and monitoring of deployed applications on Kubernetes&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Updated analytics using micrometer&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Security improvements&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Dashboard improvements&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Database migration support&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="revamped-metrics-and-monitoring-of-deployed-applications-on-kubernetes"&gt;&lt;a class="anchor" href="#revamped-metrics-and-monitoring-of-deployed-applications-on-kubernetes"&gt;&lt;/a&gt;Revamped metrics and monitoring of deployed applications on Kubernetes&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Data Flow 2.0 introduces a new architecture for collecting and displaying application metrics for Streams.  The Data Flow Metrics Collector introduced in Data Flow 1.4 has been removed.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="imageblock"&gt;
-&lt;div class="content"&gt;
-&lt;img src="https://raw.githubusercontent.com/spring-cloud/spring-cloud-dataflow/master/spring-cloud-dataflow-docs/src/main/asciidoc/images/micrometer-arch.png" alt="Monitoring Architecture"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This new architecture is based on using the Micrometer library in the deployed applications to send metrics to popular monitoring systems and then visualizing the metrics with &lt;a href="https://grafana.com/"&gt;Grafana&lt;/a&gt;.
-Each application in the &lt;a href="https://cloud.spring.io/spring-cloud-stream-app-starters/"&gt;Einstein release train of the application starters&lt;/a&gt; contains Micrometer libraries for Prometheus, InfluxDB and DataDog.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;In this release we provide instructions on how to get started using &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/2.0.0.RC1/reference/htmlsingle/#streams-monitoring-kubernetes-prometheus"&gt;Prometheus&lt;/a&gt; as the monitoring system when running Data Flow on Kubernetes.
-Two Grafana dashboards are also provided, one that shows a more application centric view and other that show a more stream based view.  Here is a screenshot of the Grafana dashboard based on Prometheus showing the message rates for the applications in a stream.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="imageblock"&gt;
-&lt;div class="content"&gt;
-&lt;img src="https://raw.githubusercontent.com/spring-cloud/spring-cloud-dataflow/master/spring-cloud-dataflow-docs/src/main/asciidoc/images/grafana-prometheus-scdf-applications-dashboard.png" alt="Grafana Dashboard for applications in a stream deployed on Kubernetes"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Selectors for applications and streams allows you to navigate down to specific areas of interest.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="updated-analytics-using-micrometer"&gt;&lt;a class="anchor" href="#updated-analytics-using-micrometer"&gt;&lt;/a&gt;Updated analytics using micrometer&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;In Data Flow 2.0, the use of Redis counters has been replaced with counters provided by the Micrometer library.
-The Einstein release train of application starters now provide a &lt;a href="https://docs.spring.io/spring-cloud-stream-app-starters/docs/Einstein.RELEASE/reference/htmlsingle/#spring-cloud-stream-modules-counter-processor"&gt;Counter Processor&lt;/a&gt; and a &lt;a href="https://docs.spring.io/spring-cloud-stream-app-starters/docs/Einstein.RELEASE/reference/htmlsingle/#spring-cloud-stream-modules-counter-sink"&gt;Counter Sink&lt;/a&gt;.  &lt;a href="https://docs.spring.io/spring-cloud-dataflow-samples/docs/current/reference/htmlsingle/#spring-cloud-data-flow-samples-twitter-analytics-overview"&gt;The twitter analytics sample application&lt;/a&gt; has been updated to use the new counter implementation and a Grafana Dashboard is provided to show the equivalent view of what the Data Flow Analytics UI had previously shown.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="imageblock"&gt;
-&lt;div class="content"&gt;
-&lt;img src="https://docs.spring.io/spring-cloud-dataflow-samples/docs/current/reference/htmlsingle/images/twitter_analytics.png" alt="Grafana Dashboard for Twitter Analytics"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="security-improvements"&gt;&lt;a class="anchor" href="#security-improvements"&gt;&lt;/a&gt;Security improvements&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The server uses OAuth 2.0 authentication to secure the REST endpoints.  Documentation and sample code is now available that shows how to &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/2.0.0.RC1/reference/htmlsingle/#_data_flow_template_and_security"&gt;configure the &lt;code&gt;DataFlowTemplate&lt;/code&gt; for use with OAuth2.0&lt;/a&gt;.
-Dependent libraries that had recent CVEs reported were updated.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="dashboard-improvements"&gt;&lt;a class="anchor" href="#dashboard-improvements"&gt;&lt;/a&gt;Dashboard improvements&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;You can now search the audit trail by a date range.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="database-migration-support"&gt;&lt;a class="anchor" href="#database-migration-support"&gt;&lt;/a&gt;Database migration support&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Flyway migration code has been improved and tested across all supported databases using a suite of &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-acceptance-tests/blob/master/acceptance-tests/spring-cloud-dataflow-acceptance-tests/src/test/java/org/springframework/cloud/dataflow/acceptance/tests/DataflowServerMigrationTests.java"&gt;Docker based integration tests&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="what-is-next"&gt;&lt;a class="anchor" href="#what-is-next"&gt;&lt;/a&gt;What is next&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We postponed the feature of storing the detailed history of Task deployments for 2.1.  Various documentation issues and additional testing is planned leading up to the 2.0 GA release.  General themes for 2.1 will be a focus on documentation, getting started guides, videos and overall user experience.  A new site for Data Flow is planned as well.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Also note that the 1.x line of Spring Cloud Data Flow will cease maintenance twelve months from the 2.0 GA announcement date. The 2.0 GA is tentatively planned for end of February 2019, so in February 2020, the 1.x line would reach end-of-general-support status.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="a-special-thanks"&gt;&lt;a class="anchor" href="#a-special-thanks"&gt;&lt;/a&gt;A special thanks&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Last but not least, we wanted to thank &lt;a href="https://github.com/sylank"&gt;Daniel Serleg&lt;/a&gt; for &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/pulls?q=is%3Apr+author%3Asylank"&gt;his many contributions in this release&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="stay-in-touch"&gt;&lt;a class="anchor" href="#stay-in-touch"&gt;&lt;/a&gt;Stay in touch&amp;#8230;&amp;#8203;&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-dataflow"&gt;Stackoverflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/issues"&gt;GitHub&lt;/a&gt; or via &lt;a href="https://gitter.im/spring-cloud/spring-cloud-dataflow"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Tools 4.1.2 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/02/22/spring-tools-4-1-2-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Martin Lippert</name>
-    </author>
-    <id>tag:spring.io,2019-02-22:3573</id>
-    <updated>2019-02-22T15:52:36Z</updated>
-    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
-&lt;p&gt;I am happy to announce the 4.1.2 release of the Spring Tools 4 for Eclipse, Visual Studio Code, and Atom.&lt;/p&gt;
-&lt;p&gt;Highlights from this release include:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; new: live hover information for bean wirings now supports war-packaged boot apps running in a local server installation&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; new: live hover information for &lt;code&gt;@Value&lt;/code&gt; annotations (&lt;a href="https://github.com/spring-projects/sts4/issues/177"&gt;#177&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; new: bean symbols from XML config files now include exact location information&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: navigate to resource in live hovers for apps running on CF works again&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: search for symbols in project now happens on the server side to avoid no project-related symbols showing up on the client side before you start typing in a query&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; performance: improvement to further reduce the CPU load when checking processes for live hovers (&lt;a href="https://github.com/spring-projects/sts4/issues/140"&gt;#140&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; performance: the language server doesn&amp;rsquo;t trigger a full source and javadoc download for Maven projects anymore&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Concourse)&lt;/em&gt; new: support for hierarchical symbols in file added, produces nice outline view information now&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Concourse)&lt;/em&gt; new: support for YAML anchors, references, extend added (&lt;a href="https://github.com/spring-projects/sts4/issues/58"&gt;#58&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; new: quick text search can be switched to non-modal mode (&lt;a href="https://github.com/spring-projects/sts4/issues/189"&gt;#189&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; new: quick text search allows results to be filtered for certain file types (&lt;a href="https://github.com/spring-projects/sts4/issues/185"&gt;#185&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: startup performance regression found in early builds on Eclipse 4.11&lt;/li&gt;
-  &lt;li&gt;various additional bug fixes and improvements&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To download the distribution for Eclipse and find links to the marketplace entries for Visual Studio Code and Atom, please go visit:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Tools 4: &lt;a href="https://spring.io/tools/"&gt;https://spring.io/tools/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Detailed changes can be found here: &lt;a href="https://github.com/spring-projects/sts4/wiki/Changelog#2019-02-21-412-release"&gt;https://github.com/spring-projects/sts4/wiki/Changelog#2019-02-21-412-release&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Spring Tools 4.2.0 is scheduled to be released in late March 2019 (including an update to Eclipse 2019-03).&lt;/p&gt;
-&lt;p&gt;Enjoy!&lt;/p&gt;</content>
   </entry>
 </feed>

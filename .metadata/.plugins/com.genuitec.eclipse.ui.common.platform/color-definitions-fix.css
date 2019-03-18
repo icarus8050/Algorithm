@@ -2139,6 +2139,7 @@ IEclipsePreferences#org-eclipse-ui-workbench {
 		'org.eclipse.egit.ui.DiffRemoveBackgroundColor=97,45,45'
 		'org.eclipse.egit.ui.DiffRemoveForegroundColor=238,240,241'
 		'org.eclipse.egit.ui.IgnoredResourceForegroundColor=157,167,175'
+		'org.eclipse.egit.ui.UncommittedChangeBackgroundColor=25,29,31'
 		'org.eclipse.egit.ui.UncommittedChangeForegroundColor=216,220,223'
 		'org.eclipse.jdt.ui.ColoredLabels.writeaccess_highlight=52,46,35'
 		'org.eclipse.jdt.ui.abstractMethodInvocationHighlighting=255,255,255'
