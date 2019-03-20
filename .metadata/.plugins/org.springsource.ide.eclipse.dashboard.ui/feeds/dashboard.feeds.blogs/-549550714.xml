@@ -5,7 +5,80 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2019-03-15T00:00:00Z</updated>
+  <updated>2019-03-19T11:57:01Z</updated>
+  <entry>
+    <title>This Week in Spring - March 19th, 2019</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/03/19/this-week-in-spring-march-19th-2019" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2019-03-19:3607</id>
+    <updated>2019-03-19T11:57:01Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! What a wild and wonderful week of Spring it&amp;rsquo;s been! This week I&amp;rsquo;m in London, UK for the epic SpringOne Tour event and customer visits, then I&amp;rsquo;m off to Vienna, Austria and then I&amp;rsquo;m off to Amsterdam, NL for the SpringOne Tour event there. If you&amp;rsquo;re in any of these &lt;a href="http://twitter.com/Starbuxman"&gt;places please say hi!&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/03/18/spring-cloud-data-flow-2-0-1-ga-released"&gt;Spring Cloud Data Flow 2.0.1 GA Released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/03/15/a-bootiful-podcast-spring-security-engineer-and-oauth-slayer-joe-grandja"&gt;A Bootiful Podcast: Spring Security engineer and OAuth slayer Joe Grandja&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Hi Spring fans! I did a special season mid-interregnum video on Spring Tips: &lt;a href="https://spring.io/blog/2019/03/14/spring-tips-be-lazy-and-fast-with-spring-boot-2-2-m1"&gt;&lt;em&gt;Be Lazy AND Fast with Spring Boot 2.2.M1!&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/03/14/lazy-initialization-in-spring-boot-2-2"&gt;Lazy Initialization in Spring Boot 2.2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Integrating Spring Cloud with Kubernetes is really simple! In this video, Paul Czarkowski is &lt;a href="https://www.youtube.com/watch?v=jR35JKq5rmc"&gt;showing how your Spring Boot app can leverage Kubernetes features (such as ConfigMap) without having to change your source code!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/spring_io/status/1107666963592110081"&gt;Have you secured your tickets for the Spring I/O conference in bootiful Barcelona, Spain?&lt;/a&gt; I&amp;rsquo;ll be there, co-presenting four different talks with my friends in the ecosystem. Join us!&lt;/li&gt;
+  &lt;li&gt;the Java Code Geeks have a nice post on using the &lt;a href="https://examples.javacodegeeks.com/enterprise-java/spring/boot/spring-boot-crossorigin-annotation-example/"&gt;Spring Boot &lt;code&gt;@CrossOrigin&lt;/code&gt; annotation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/springcloud/status/1106776301090807808"&gt;Have you signed up for SpringOne Platform 2019&lt;/a&gt;? Get your tickets now!&lt;/li&gt;
+  &lt;li&gt;Great tweet from Spring Data lead Oliver Drotbohm &lt;a href="https://twitter.com/odrotbohm/status/1106645111402913794?s=20"&gt;on Twitter: &amp;quot;&amp;hellip;when comparing the different frameworks&amp;hellip;, more of those participants who implemented some security achieved a high score for security through Spring¡¯s default implementation.¡°&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Nice! &lt;a href="https://twitter.com/sdeleuze/status/1106610144744562688?s=12"&gt;Kotlin coroutine support in Spring WebFlux&lt;/a&gt; is coming!&lt;/li&gt;
+  &lt;li&gt;Good news everybody! In February &lt;a href="https://twitter.com/SpringData/status/1106550030410883072"&gt;Spring Data crossed 2.5 million downloads for the first time!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Check out the slides from Olga Maciaszek-Sharma and Marcin Grzejszczak on using &lt;a href="https://twitter.com/springcloud/status/1106522322113101825"&gt;Spring in a post Spring Cloud Netflix world&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Congrats Spring Security team member Joe Grandja &lt;a href="https://twitter.com/springcentral/status/1106210126627856390"&gt;on just passing your 3 year work-anniversary on the Spring team!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I love this post from Spring Cloud Stream teammember &lt;a href="https://www.confluent.io/blog/spring-for-apache-kafka-deep-dive-part-2-apache-kafka-spring-cloud-stream"&gt;Soby Chacko on using Spring Cloud Stream and Kafka&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud Data Flow 2.0.1 GA Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/03/18/spring-cloud-data-flow-2-0-1-ga-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Ilayaperumal Gopinathan</name>
+    </author>
+    <id>tag:spring.io,2019-03-18:3605</id>
+    <updated>2019-03-18T16:12:02Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;The &lt;a href="https://cloud.spring.io/spring-cloud-dataflow/"&gt;Spring Cloud Data Flow&lt;/a&gt; team is pleased to announce the release of 2.0.1 GA of Data Flow. Follow the Getting Started guides for running on &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/2.0.1.RELEASE/reference/htmlsingle/#getting-started-local"&gt;Local&lt;/a&gt;, &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/2.0.1.RELEASE/reference/htmlsingle/#getting-started-cloudfoundry"&gt;Cloud Foundry&lt;/a&gt;, and &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/2.0.1.RELEASE/reference/htmlsingle/#getting-started-kubernetes"&gt;Kubernetes&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This is a minor release with mostly bug fixes and documentation enhancements.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Here are the highlights of this release:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Kubernetes deployment configuration for Skipper server is now backed by MySQL as the default database.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove extraneous Spring Data Redis dependency to fix Spring Cloud Data Flow server health check.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Improved Getting Started documentation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bug fixes on Spring Cloud Data Flow and Spring Cloud Data Flow UI.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;All the out-of-the-box stream apps from the Documentation examples now use Einstein SR2.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="stay-in-touch"&gt;&lt;a class="anchor" href="#stay-in-touch"&gt;&lt;/a&gt;Stay in touch&amp;#8230;&amp;#8203;&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-dataflow"&gt;Stackoverflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/issues"&gt;GitHub&lt;/a&gt; or via &lt;a href="https://gitter.im/spring-cloud/spring-cloud-dataflow"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+  </entry>
   <entry>
     <title>A Bootiful Podcast: Spring Security engineer and OAuth slayer Joe Grandja</title>
     <link rel="alternate" href="https://spring.io/blog/2019/03/15/a-bootiful-podcast-spring-security-engineer-and-oauth-slayer-joe-grandja" />
@@ -1404,73 +1477,5 @@ public FilterRegistrationBean&amp;lt;ForwardedHeaderFilter&amp;gt; forwardedHead
 &lt;div class="paragraph"&gt;
 &lt;p&gt;Thanks to &lt;a href="https://spring.io/team/scottfrederick"&gt;Scott Frederick&lt;/a&gt; and &lt;a href="https://spring.io/team/dturanski"&gt;David Turanski&lt;/a&gt; for their contributions!&lt;/p&gt;
 &lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Vault 2.1.2.RELEASE available</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/02/27/spring-vault-2-1-2-release-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Mark Paluch</name>
-    </author>
-    <id>tag:spring.io,2019-02-27:3587</id>
-    <updated>2019-02-27T15:44:57Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;On behalf of the community, I&amp;#8217;d like to announce the availability of the Spring Vault service release 2.1.2 available from Maven Central.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This release ships with bug fixes and dependency version updates. Spring Vault 2.1.2 is going to be picked up by Spring Cloud Vault 2.1.2 with the Spring Cloud Greenwich SR1 release in the next days.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;For a complete list of changes see the &lt;a href="http://docs.spring.io/spring-vault/docs/2.1.2.RELEASE/changelog.txt"&gt;changelog&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="end-of-life-for-1-1-x-and-2-0-x-lines"&gt;&lt;a class="anchor" href="#end-of-life-for-1-1-x-and-2-0-x-lines"&gt;&lt;/a&gt;End of Life for 1.1.x and 2.0.x Lines&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;With this release cycle, we have stopped backporting changes to the earlier Spring Vault 2.0.x line. The 2.0.x line has already reached its end of life. For the 1.1.x line, we&amp;#8217;re going to backport fixes until Aug 1st, 2019, in alignment with &lt;a href="https://spring.io/blog/2018/07/30/spring-boot-1-x-eol-aug-1st-2019"&gt;Spring Boot 1.5.x&lt;/a&gt; and &lt;a href="https://spring.io/blog/2018/07/30/spring-cloud-edgware-eol-aug-1st-2019"&gt;Spring Cloud Edgware&lt;/a&gt; EOL dates.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-vault/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-vault"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-vault/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-vault/docs/2.1.2.RELEASE/reference/html/"&gt;Documentation for 2.1.2.RELEASE&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-vault"&gt;Stack Overflow&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - February 26, 2019</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/02/26/this-week-in-spring-february-26-2019" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2019-02-26:3586</id>
-    <updated>2019-02-26T22:02:00Z</updated>
-    <content type="html">&lt;p&gt;Hi Spring fans! What a week! This week I&amp;rsquo;m in San Francisco, CA; Columbus, OH (for the &lt;a href="https://springonetour.io/2019/columbus"&gt;epic SpringOne Tour stop there&lt;/a&gt;), and then it&amp;rsquo;s off to Tel Aviv, Israel for customer visits and an appearance at the &lt;a href="https://www.meetup.com/JavaIL/events/259118206/"&gt;Israel JUG&lt;/a&gt;. If you&amp;rsquo;re around, then I&amp;rsquo;d love to connect! &lt;/p&gt;
-&lt;p&gt;Anyway, and as always, we&amp;rsquo;ve got tons to cover so let&amp;rsquo;s get to it! &lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/02/26/spring-cloud-finchley-sr3-now-available"&gt;Spring Cloud Finchley.SR3 Now Available&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://content.pivotal.io/blog/out-of-the-box-application-observability-with-spring-boot-pivotal-cloud-foundry"&gt;Out of the Box Application Observability with Spring Boot &amp;amp; Pivotal Cloud Foundry - Pivotal&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://content.pivotal.io/intersect/the-cios-guide-to-kubernetes?_lrsc=8cc3610b-bd30-4319-9210-8558e099fd9d"&gt;The CIO&amp;rsquo;s guide to Kubernetes&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/02/22/spring-cloud-data-flow-and-skipper-2-0-rc1-released"&gt;Spring Cloud Data Flow and Skipper 2.0 RC1 Released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/02/22/spring-tools-4-1-2-released"&gt;Spring Tools 4.1.2 released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Last week in &lt;em&gt;A Bootiful Podcast&lt;/em&gt;, I &lt;a href="https://spring.io/blog/2019/02/22/a-bootiful-podcast-an-interview-with-sree-tummidi-senior-product-manager-for-security-at-pivotal"&gt;had the privilege of interviewing Sree Tummidi, Senior Product Manager for Security at Pivotal&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/02/21/cve-2019-3778-spring-security-oauth-2-3-5-2-2-4-2-1-4-2-0-17-released"&gt;CVE-2019-3778: Spring Security OAuth 2.3.5, 2.2.4, 2.1.4, 2.0.17 Released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Check out the latest-and-greatest in my second favorite place on the internet, &lt;a href="http://start.Spring.io"&gt;start.Spring.io&lt;/a&gt;: &lt;a href="https://spring.io/blog/2019/02/20/what-s-new-with-spring-initializr"&gt;What&amp;rsquo;s new with Spring Initializr&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Last week was the recap post for season 5 of Spring Tips where we look at all the episodes from the last season. &lt;a href="https://spring.io/blog/2019/02/20/spring-tips-season-5-recap"&gt;Spring Tips: Season 5 Recap&lt;/a&gt; I&amp;rsquo;m already hard at work on season 6, of course, so stay tuned. If you get through the Season 5 episodes, then you might go back &lt;a href="http://bit.ly/spring-tips-playlist"&gt;and watch the older ones&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Check out part two of this Flowable BMPN system webinar series &lt;a href="https://twitter.com/jbarrez/status/1100396106649927680?s=12"&gt; where they use serverless functions. Spoiler: they&amp;rsquo;re building a process as a service function using Spring Fu and GraalVM that boots up in 13ms!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://tech.paulcz.net/blog/spring-into-kubernetes-part-1/"&gt;Spring into Kubernetes - Part 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://t.co/kMXznCq1C7?ssr=true"&gt;RSocket: Reactive Streaming Service Networking with Ryland Degnan - Software Engineering Daily&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;The Okta blog is &lt;em&gt;killing&lt;/em&gt; it! Check out this latest post on &lt;a href="https://twitter.com/oktadev/status/1100057316236374017?s=12"&gt;OAuth 2.0 device flow and social login for Spring Boot (using reactive Spring, MongoDB, and so much more)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Another great post on the Okta blog, this one &lt;a href="https://developer.okta.com/blog/2019/02/25/java-i18n-internationalization-localization"&gt;i18n (&amp;ldquo;internationalization&amp;rdquo;) in Java 11, Spring Boot, and JavaScript&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Netifi have put together a collection of YouTube videos related to &lt;a href="https://twitter.com/netifi_inc/status/1100096845924233218?s=12"&gt;RSocket with speakers from Pivotal, Facebook and Netifi &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;This isn&amp;rsquo;t strictly speaking related to Spring, but it&amp;rsquo;s interesting: SalesForce&amp;rsquo;s &lt;a href="https://twitter.com/ryanmichela/status/1098372725993697280?s=12"&gt;jProtoc 0.9.0 is out! It&amp;rsquo;s a Java protofuf compiler.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I love watching the cool things that Thomas Darimont gets up to. This time he&amp;rsquo;s put together a nice demo on using &lt;a href="https://github.com/thomasdarimont/spring-boot-security-saml-sample/tree/poc/keycloak-saml-idp#run-with-keycloak"&gt;Spring Security, SAML, Spring Boot and IBM/RedHat/JBoss KeyCloak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;This post is &lt;em&gt;nuts&lt;/em&gt;! It&amp;rsquo;s how we got &lt;a href="https://bsideup.github.io/posts/jni-cross-compilation/"&gt;JNI cross-compilation with Docker to work in order to create a Java agent to aid developers using Reactor&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Have you seen &lt;a href="https://github.com/reactor/BlockHound/blob/1.0.0.M1/example/src/test/java/com/example/ReactorTest.java"&gt;BlockHound 1.0.0.M1?&lt;/a&gt; It&amp;rsquo;s a plugin that detects blocked threads in your reactive code.&lt;/li&gt;
-  &lt;li&gt;I love this podcast interview with Michael Cote and Paul Czarkowski &lt;a href="https://twitter.com/pivotalcf/status/1098407368273076225?s=12"&gt; on running Spring Boot apps on Kubernetes and more&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;S?bastien Deleuze &lt;a href="https://twitter.com/sdeleuze/status/1098576184202485761?s=12"&gt;has some good news to share: it seems next milestone of Spring Data R2DBC will have Kotlin Coroutines support!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;A nice post on Mkyong on &lt;a href="http://www.mkyong.com/spring-boot/spring-boot-junit-5-mockito/"&gt;JUnit 5 and Spring Boot and Mockito&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud-samples/spring-cloud-contract-samples/commit/2be798bb8d907bcf91771400f4834b079c4549bb"&gt;The 2.1.0.RELEASE of Spring Cloud Contract (Greenwich.RELEASE release train) supports binary payloads. Here you can find a commit that adds a sample of how you can use it&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Yet another nice post on the Okta blog, this one on adding &lt;a href="https://developer.okta.com/blog/2019/02/19/add-social-login-to-spring-boot"&gt;social login to Your JHipster App&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
   </entry>
 </feed>
