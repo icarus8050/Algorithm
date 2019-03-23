@@ -5,7 +5,197 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2019-03-19T11:57:01Z</updated>
+  <updated>2019-03-22T16:46:00Z</updated>
+  <entry>
+    <title>Spring Boot for Apache Geode &amp; Pivotal GemFire 1.0.0.M4 Released!</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/03/22/spring-boot-for-apache-geode-pivotal-gemfire-1-0-0-m4-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>John Blum</name>
+    </author>
+    <id>tag:spring.io,2019-03-22:3611</id>
+    <updated>2019-03-22T16:46:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the Spring, Apache Geode and Pivotal GemFire communities, I am pleased to announce the release of &lt;em&gt;Spring Boot for Apache Geode &amp;amp; Pivotal GemFire&lt;/em&gt; (SBDG) &lt;code&gt;1.0.0.M4&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Special appreciation goes out to &lt;a href="https://spring.io/team/jlong"&gt;@starbuxman&lt;/a&gt; for his invaluable feedback after &lt;em&gt;SpringOne Platform&lt;/em&gt; 2018.  And, if you have not seen Josh&amp;#8217;s Spring Tip &lt;a href="https://spring.io/blog/2019/02/13/spring-tips-apache-geode"&gt;video&lt;/a&gt; on Apache, please check it out.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="new"&gt;&lt;a class="anchor" href="#new"&gt;&lt;/a&gt;What&amp;#8217;s New&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Among a few minor updates, Milestone 4 adds the following new capabilities:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Externalized configuration support with &lt;em&gt;Spring Boot&amp;#8217;s&lt;/em&gt; Configuration Processor and SBDG provided &lt;code&gt;@ConfigurationProperties&lt;/code&gt; classes (Read &lt;a href="https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/1.0.0.BUILD-SNAPSHOT/reference/htmlsingle/#geode-configuration"&gt;here&lt;/a&gt; for more details).  Inside STS or IJ Enterprise addition, developers will have the added convenience of auto-completion and content assist.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GemFire/Geode nodes can now be named with the &lt;code&gt;spring.application.name&lt;/code&gt; property.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The GemFire/Geode Spring Boot starters now include Spring Shell as a runtime dependency, which is convenient when enabling and using GemFire/Geode&amp;#8217;s management services.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Provided a workaround to an &lt;a href="https://github.com/spring-cloud/spring-cloud-commons/issues/476"&gt;issue&lt;/a&gt; in Spring Cloud Commons .&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;For complete list of changes, see the &lt;a href="https://github.com/spring-projects/spring-boot-data-geode/blob/1.0.0.M4/spring-geode/src/main/resources/changelog.txt#L7-L21"&gt;changelog&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;You can acquire the bits from the Spring &lt;code&gt;libs-milestone&lt;/code&gt; repository:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock xml"&gt;
+&lt;div class="title"&gt;Maven&lt;/div&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code&gt;&amp;lt;repositories&amp;gt;
+    &amp;lt;repository&amp;gt;
+        &amp;lt;id&amp;gt;spring-libs-milestone&amp;lt;/id&amp;gt;
+        &amp;lt;name&amp;gt;Spring Milestone Maven Repository&amp;lt;/name&amp;gt;
+        &amp;lt;url&amp;gt;https://repo.spring.io/libs-milestone&amp;lt;/url&amp;gt;
+    &amp;lt;/repository&amp;gt;
+&amp;lt;/repositories&amp;gt;
+
+&amp;lt;dependencies&amp;gt;
+    &amp;lt;dependency&amp;gt;
+        &amp;lt;groupId&amp;gt;org.springframework.geode&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;spring-geode-starter&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;1.0.0.M4&amp;lt;/version&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+&amp;lt;/dependencies&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="title"&gt;Gradle&lt;/div&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;repository {
+  maven { url "https://repo.spring.io/libs-milestone" }
+}
+
+dependencies {
+  compile 'org.springframework.geode:spring-geode-starter:1.0.0.M4'
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;To switch from Apache Geode to Pivotal GemFire simply, change the Spring Boot starter from &lt;code&gt;spring-geode-starter&lt;/code&gt; to &lt;code&gt;spring-gemfire-starter&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="next"&gt;&lt;a class="anchor" href="#next"&gt;&lt;/a&gt;What&amp;#8217;s Next&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Next up will be SBDG &lt;code&gt;1.0.0.RC1&lt;/code&gt;.  In this release we will be adding samples demonstrating how to effectively use Apache Geode or Pivotal GemFire in a Spring context with Spring Boot.  We will be spicing up the documentation in preparation for the final GA to ensure that users are successful with SBDG in all their UCs.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The &lt;code&gt;1.0.0.GA&lt;/code&gt; will follow shortly after RC1 as will &lt;code&gt;1.1.0.M1&lt;/code&gt;, which will rebase SBDG on Spring Boot 2.1, Spring Framework 5.1 and Spring Data Lovelace.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="conclusion"&gt;&lt;a class="anchor" href="#conclusion"&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;As always feedback is appreciated and welcomed.  Please give this release a try and let us know if you have any ideas, issues or recommendations.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-boot-data-geode/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot-data-geode/pulls"&gt;PR&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;StackOverflow&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Initializr updates</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/03/21/spring-initializr-updates" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Damien Vitrac</name>
+    </author>
+    <id>tag:spring.io,2019-03-18:3606</id>
+    <updated>2019-03-21T15:20:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that &lt;strong&gt;Spring Initializr&lt;/strong&gt; has been updated and is now available on &lt;a href="https://start.spring.io"&gt;start.spring.io&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#ui-changes-listening-to-your-feedback" class="anchor" name="ui-changes-listening-to-your-feedback"&gt;&lt;/a&gt;UI changes - listening to your feedback&lt;/h2&gt;
+&lt;p&gt;Following the last revision, the &lt;a href="https://spring.io/blog/2019/03/05/spring-initializr-new-ui"&gt;main feedback&lt;/a&gt; we received was about the missing list of dependencies. Some community members seemed to be looking at this list for information purposes (not necessarily using the website to generate a new app), while others would just like to see what&amp;rsquo;s available.&lt;/p&gt;
+&lt;img src="https://static.spring.io/blog/damienvitrac/20190318/initializr.png"&gt;
+&lt;p&gt;While &lt;a href="https://start.spring.io"&gt;start.spring.io&lt;/a&gt; seems like a very simple service, generating applications with a simple HTML form, there&amp;rsquo;s much more to it - this round of feedback taught us that we need to double-down on product discovery and user centered design.&lt;/p&gt;
+&lt;p&gt;We brought the &lt;strong&gt;dependency list&lt;/strong&gt; back to the page but in a way that will help us to better understand how the website is being used and how to improve it. We hope that the community will find in that list what was missing in the previous version.&lt;/p&gt;
+&lt;p&gt;Of course, we fixed a few HTML/CSS issues and improved version incompatibility messages to help you select the appropriate Spring Boot version.&lt;/p&gt;&lt;h2&gt;&lt;a href="#architecture" class="anchor" name="architecture"&gt;&lt;/a&gt;Architecture&lt;/h2&gt;
+&lt;p&gt;This application is still made of two parts:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The &lt;a href="https://github.com/spring-io/initializr"&gt;Initializr library&lt;/a&gt; that contains the project generation logic and the Web API&lt;/li&gt;
+  &lt;li&gt;The &lt;a href="https://github.com/spring-io/start.spring.io"&gt;start.spring.io&lt;/a&gt; service instance, with the specifics behind the instance running in production&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Because the &lt;strong&gt;Web UI&lt;/strong&gt; changes will be more and more involved, we&amp;rsquo;ve decided to move all Web UI-specific code to the start.spring.io project. This will hopefully clarify things. If you&amp;rsquo;re interested in running a service very similar to start.spring.io, you should now fork the start.spring.io project. If you&amp;rsquo;d like to write your own Web UI or work on core changes, then using the &lt;strong&gt;Initializr library&lt;/strong&gt; is a good starting point.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-next" class="anchor" name="what-rsquo-s-next"&gt;&lt;/a&gt;What&amp;rsquo;s next?&lt;/h2&gt;
+&lt;p&gt;Over the next couple of weeks we will be conducting &lt;strong&gt;user interviews&lt;/strong&gt; to gain better insights on how to improve the website experience and a deeper understanding of the &lt;strong&gt;&amp;ldquo;whys&amp;rdquo;&lt;/strong&gt; behind how users are interacting with the service. &lt;/p&gt;
+&lt;p&gt;As we cannot interview all of our users (we appreciate you all!), we invite you to leave your input and thoughts with our optional &lt;a href="https://docs.google.com/forms/d/1CsQaJAYFntD8FkBz-2zjtew8maj2JWxV2Fv2ugea_VA/viewform?ts=5c8f9ee0&amp;edit_requested=true"&gt;anonymous survey&lt;/a&gt;. This will allow us to build a larger picture of how people are using the service and the expectations and wants from the community. &lt;/p&gt;
+&lt;p&gt;Thank you for your feedback and support as we continue on this journey.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>A Bootiful Podcast: CQRS with AxonIQ's Steven van Beelen and Pivotal's Ben Wilcock</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/03/21/a-bootiful-podcast-cqrs-with-axoniq-s-steven-van-beelen-and-pivotal-s-ben-wilcock" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2019-03-21:3610</id>
+    <updated>2019-03-21T07:57:43Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! In this week&amp;rsquo;s installment &lt;a href="http://twitter.com/Starbuxman"&gt;Josh Long&lt;/a&gt; talks to AxonIQ&amp;rsquo;s Steven van Beelen, lead of the Axon project, and Pivotal&amp;rsquo;s Ben Wilcock, on CQRS, event-sourcing, event-storming, microservices, Spring Boot and the long camaraderie shared by Axon and Spring.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Axon framework lead &lt;a href="http://twitter.com/smcvbeelen"&gt;Steve van Beelen&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Pivotal product marketing manager &lt;a href="http://twitter.com/benbravo73"&gt;Ben Wilcock&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Axon founder and AxonIQ CEO &lt;a href="http://twitter.com/allardbz"&gt;Allard Buijze&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://axoniq.io/"&gt;AxonIQ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/593419098&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Tips: Reactive MySQL Support with Jasync SQL and R2DBC</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/03/20/spring-tips-reactive-mysql-support-with-jasync-sql-and-r2dbc" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2019-03-21:3609</id>
+    <updated>2019-03-20T23:59:00Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to yet another super-quick mid-season interregnum installment of Spring Tips where we look at &lt;em&gt;super early/preliminary&lt;/em&gt; new R2DBC support for reactive MySQL in the Jasync SQL project. &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt;&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/DvO4zLVDkMs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>Announcing General Availability of Spring Cloud Function - 2.1.0.M1</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/03/20/announcing-general-availability-of-spring-cloud-function-2-1-0-m1" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Oleg Zhurakousky</name>
+    </author>
+    <id>tag:spring.io,2019-03-20:3608</id>
+    <updated>2019-03-20T16:07:13Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce first milestone of the Spring Cloud Function - 2.1.0.M1.&lt;/p&gt;
+&lt;p&gt;Individual modules of Spring Cloud Function 2.1.0.M1 are available for use in the &lt;a href="https://repo.spring.io/libs-snapshot/org/springframework/cloud/"&gt;Spring Milestone&lt;/a&gt; repository.&lt;br/&gt;This release encompasses the following:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Some of the features that has always been available in &lt;em&gt;bean factory based&lt;/em&gt; function catalog are now part of the &lt;strong&gt;&lt;em&gt;functional form&lt;/em&gt;&lt;/strong&gt; (see &lt;a href="https://spring.io/blog/2018/10/22/functional-bean-registrations-in-spring-cloud-function"&gt;Dave Syer&amp;rsquo;s blog&lt;/a&gt; for more details on &lt;em&gt;functional form&lt;/em&gt;) :
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Multiple endpoint support&lt;/em&gt; - ability to map multiple HTTP endpoints the same way one would expect in conventional context configuration.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Function composition&lt;/em&gt; - ability to compose function (e.g., &lt;code&gt;foo|bar&lt;/code&gt; or &lt;code&gt;foo,bar&lt;/code&gt;).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ability to communicate and retain meta-information via Message headers for cases where Message function is composed with non-Message (e.g., &lt;code&gt;Function&amp;lt;Message&amp;lt;?&amp;gt;&amp;gt;, Message&amp;lt;?&amp;gt;&amp;gt;&lt;/code&gt; is composed with &lt;code&gt;Function&amp;lt;?, ?&amp;gt;&lt;/code&gt;).&lt;/li&gt;
+  &lt;li&gt;Support for implicit function composition where &lt;code&gt;catalog.lookup(&amp;quot;&amp;quot;)&lt;/code&gt;, &lt;code&gt;catalog.lookup(&amp;quot;|&amp;quot;)&lt;/code&gt;, &lt;code&gt;catalog.lookup(&amp;quot;foo|&amp;quot;)&lt;/code&gt; or &lt;code&gt;catalog.lookup(&amp;quot;|bar&amp;quot;)&lt;/code&gt; are all valid lookups providing container with enough information to determine your intentions. For example, &lt;em&gt;empty string&lt;/em&gt; simply implies there is only one Function in catalog and no explicit name should be provided.&lt;/li&gt;
+  &lt;li&gt;Creating Supplier from remote HTTP endpoint where one can define the &lt;em&gt;sink url&lt;/em&gt; (destination) and the &lt;em&gt;source url&lt;/em&gt; (source) and use the app as a pipeline for events from/to HTTP.&lt;/li&gt;
+  &lt;li&gt;AWS &lt;a href="https://cloud.spring.io/spring-cloud-static/spring-cloud-function/2.1.0.M1/aws.html#_custom_runtime"&gt;Custom Runtime&lt;/a&gt; feature.&lt;/li&gt;
+  &lt;li&gt;Other minor &lt;a href="https://github.com/spring-cloud/spring-cloud-function/milestone/16?closed=1"&gt;enhancements and bug-fixes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Also, there was a major update to both the &lt;a href="https://spring.io/projects/spring-cloud-function"&gt;project&amp;rsquo;s home page&lt;/a&gt; as well as &lt;a href="https://cloud.spring.io/spring-cloud-static/spring-cloud-function/2.1.0.M1/home.html"&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Spring Cloud Function 2.1.x is dependent on spring-boot 2.1.x.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-cloud/spring-cloud-function/labels/ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-cloud-function"&gt;&lt;code&gt;spring-cloud-function&lt;/code&gt; tag&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://cloud.spring.io/spring-cloud-function/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-cloud/spring-cloud-function"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-cloud/spring-cloud-function/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://cloud.spring.io/spring-cloud-static/spring-cloud-function/2.0.0.RELEASE/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - March 19th, 2019</title>
     <link rel="alternate" href="https://spring.io/blog/2019/03/19/this-week-in-spring-march-19th-2019" />
@@ -1026,456 +1216,5 @@ clock1 6s&#xD;
   &lt;li&gt;Check out this video showing how to deploy a &lt;a href="https://twitter.com/brunoborges/status/1100913233949413376?s=12"&gt; Spring Boot application to Kubernetes using Helm + Draft + JFrog and Azure Pipelines &lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Check out &lt;a href="https://twitter.com/cloudnativeguy/status/1100826590299201542?s=12"&gt;James Williams&amp;rsquo; Pivotal blog, with input from folks from Snyk Security and Atomist, on a new software solution segment. They are &amp;quot;code&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring HATEOAS 1.0 M1 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/03/05/spring-hateoas-1-0-m1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Greg Turnquist</name>
-    </author>
-    <id>tag:spring.io,2019-03-04:3592</id>
-    <updated>2019-03-05T16:44:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;Dear Spring community, we&amp;#8217;re proud to announce the first milestone of Spring HATEOAS 1.0. Spring HATEOAS has been in development for almost seven years now. What started as tiny extension to Spring MVC became the foundation for Spring Data REST later on and has served as a fundamental building block for hypermedia based APIs in Spring MVC applications.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We received a lot of input for more advanced features from the community and eventually decided that it was time to integrate those into the library. Also, we gained a significant amount of experience using the library in the wild and thought we should take the chance to reflect those learnings in a 1.0 release.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Here&amp;#8217;s the summary:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;General overhaul in package design and domain model language.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Upgrade to Java 8 and Spring Framework 5.1 as baseline.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Advanced hypermedia support through affordances API (HAL-FORMS, Collection+JSON, UBER).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Hypermedia support SPI to plug custom media type implementations.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;LinkBuilder&lt;/code&gt; implementation for Spring WebFlux.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Completely overhauled &lt;a href="https://docs.spring.io/spring-hateoas/docs/1.0.0.M1/reference/html/"&gt;reference documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Let&amp;#8217;s have a detailed look at some of those features.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="overhaul"&gt;&lt;a class="anchor" href="#overhaul"&gt;&lt;/a&gt;Overhaul of packaging and types&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Before releasing 1.0, we took the chance to re-evaluate the package structure as well as the terminology we expose in our domain types. That led to quite a few significant changes compared to our 0.x releases.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The most fundamental change is the fact that Spring HATEOAS doesn&amp;#8217;t create resources. That&amp;#8217;s what Spring MVC/Spring WebFlux does. We create vendor neutral &lt;a href="https://docs.spring.io/spring-hateoas/docs/1.0.0.M1/reference/html/#migrate-to-1.0.changes.representation-models"&gt;representations of hypermedia&lt;/a&gt;. So we renamed those core types:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;ResourceSupport&lt;/code&gt; is now &lt;code&gt;RepresentationModel&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;Resource&amp;lt;T&amp;gt;&lt;/code&gt; is now &lt;code&gt;EntityModel&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;Resources&amp;lt;T&amp;gt;&lt;/code&gt; is now &lt;code&gt;CollectionModel&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;PagedResources&amp;lt;T&amp;gt;&lt;/code&gt; is now &lt;code&gt;PagedModel&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;As a side effect, &lt;code&gt;ResourceAssembler&lt;/code&gt; is now &lt;code&gt;RepresentationModelAssembler&lt;/code&gt; and its methods are now &lt;code&gt;toModel(&amp;#8230;&amp;#8203;)&lt;/code&gt; and &lt;code&gt;toCollection(&amp;#8230;&amp;#8203;)&lt;/code&gt;. There are similar changes throughout the code base reflecting this change.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Many APIs are centered on the concept of &lt;code&gt;List&amp;lt;Link&amp;gt;&lt;/code&gt; including &lt;code&gt;RepresentationModel.getLinks()&lt;/code&gt;. Instead of a Java list, we now return &lt;code&gt;Links&lt;/code&gt; which has been significantly enhanced to make it easier to combine, extract, and merge links. The core abstractions &lt;code&gt;LinkBuilder&lt;/code&gt;, &lt;code&gt;EntityLinks&lt;/code&gt;, &lt;code&gt;RelProvider&lt;/code&gt;, &lt;code&gt;LinkDiscoverer&lt;/code&gt; have been grouped into &lt;code&gt;server&lt;/code&gt; and &lt;code&gt;client&lt;/code&gt; packages respectively.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Sound overwhelming?
-We&amp;#8217;ve got you covered.
-We &lt;a href="https://github.com/spring-projects/spring-hateoas/blob/master/etc/migrate-to-1.0.sh"&gt;wrote a script&lt;/a&gt; that will migrate most of your code to the new types and import statements on a best effort basis.
-It may not cover everything, but should vastly ease migration.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="webflux"&gt;&lt;a class="anchor" href="#webflux"&gt;&lt;/a&gt;Spring WebFlux support&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;One of the most critical features in this release is support for Spring WebFlux and Reactive programming. This includes:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Building links reactively.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Serving hypermedia to WebFlux endpoints.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Support for WebFlux&amp;#8217;s &lt;code&gt;WebClient&lt;/code&gt; to consume hypermedia.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Spring HATEOAS comes with &lt;code&gt;WebFluxLinkBuilder&lt;/code&gt; so you can reactively build links.
-It will automatically pick up the base URI hosted by the server and merged it with the path to your endpoint.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="exampleblock"&gt;
-&lt;div class="title"&gt;Example 1. Reactively create links and affordances&lt;/div&gt;
-&lt;div class="content"&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;import static org.springframework.hateoas.server.reactive.WebFluxLinkBuilder.*;
-
-@GetMapping("/employees")
-public Mono&amp;lt;CollectionModel&amp;lt;EntityModel&amp;lt;Employee&amp;gt;&amp;gt;&amp;gt; all() {
-
-  var controller = methodOn(WebFluxEmployeeController.class);
-
-  return Flux.fromIterable(EMPLOYEES.keySet())
-    .flatMap(id -&amp;gt; findOne(id))
-    .collectList()
-    .flatMap(resources -&amp;gt; linkTo(controller.all()).withSelfRel() &lt;b class="conum"&gt;(1)&lt;/b&gt;
-      .andAffordance(controller.newEmployee(null)) &lt;b class="conum"&gt;(2)&lt;/b&gt;
-      .andAffordance(controller.search(null, null))
-      .toMono() &lt;b class="conum"&gt;(3)&lt;/b&gt;
-      .map(selfLink -&amp;gt; new CollectionModel&amp;lt;&amp;gt;(resources, selfLink)));
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="colist arabic"&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Link to a WebFlux endpoint that has Reactor types.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Add affordances in a domain-friendly way (read more on that below).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Hand back a &lt;code&gt;Mono&lt;/code&gt; so you can do any extra Reactor operations.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Assuming this controller were hosted at &lt;a href="http://example.com" class="bare"&gt;http://example.com&lt;/a&gt;, expect a hypermedia document with links to &lt;a href="http://example.com/employees" class="bare"&gt;http://example.com/employees&lt;/a&gt; to be served up.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;In addition to building links reactively, your WebFlux endpoints will now render hypermedia when you return a &lt;a href="#overhaul"&gt;&lt;code&gt;RepresentationModel&lt;/code&gt;&lt;/a&gt;-based type, whether or not it&amp;#8217;s wrapped in a Reactor type.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="affordances"&gt;&lt;a class="anchor" href="#affordances"&gt;&lt;/a&gt;Affordances&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Something we have been developing over the past two years are &lt;a href="https://docs.spring.io/spring-hateoas/docs/1.0.0.M1/reference/html/#fundamentals.affordances"&gt;Affordances&lt;/a&gt;.
-We got valuable input by &lt;a href="https://github.com/dschulten"&gt;@dschulten&lt;/a&gt; from Escalon and the team around &lt;a href="https://github.com/anderruiz"&gt;@anderruiz&lt;/a&gt; at HDIV Security on how to gather metadata to render more advanced media types that describe resource interaction in much more detail than the already supported HAL.
-You saw a snippet of that metadata gathering API in the WebFlux endpoint up above.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;By linking related operations together, it&amp;#8217;s possible to generate affordance-aware media types like HAL-FORMS (shown below):&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="exampleblock"&gt;
-&lt;div class="title"&gt;Example 2. HAL-FORMS example output generated from the affordance API&lt;/div&gt;
-&lt;div class="content"&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-json" data-lang="json"&gt;{
-  "firstName" : "Frodo",
-  "lastName" : "Baggins",
-  "role" : "ring bearer",
-  "_links" : {
-    "self" : {
-      "href" : "http://localhost:8080/employees/1"
-    }
-  },
-  "_templates" : {
-    "default" : {
-      "title" : null,
-      "method" : "put",
-      "contentType" : "",
-      "properties" : [ {
-        "name" : "firstName",
-        "required" : true
-      }, {
-        "name" : "lastName",
-        "required" : true
-      }, {
-        "name" : "role",
-        "required" : true
-      } ]
-    },
-    "partiallyUpdateEmployee" : {
-      "title" : null,
-      "method" : "patch",
-      "contentType" : "",
-      "properties" : [ {
-        "name" : "firstName",
-        "required" : false
-      }, {
-        "name" : "lastName",
-        "required" : false
-      }, {
-        "name" : "role",
-        "required" : false
-      } ]
-    }
-  }
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This affordance-aware media type provides all the information you need to perform updates to this resource.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="mediatypes"&gt;&lt;a class="anchor" href="#mediatypes"&gt;&lt;/a&gt;New media types&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Speaking of HAL-FORMs, we&amp;#8217;ve added &lt;em&gt;several&lt;/em&gt; new media types:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://docs.spring.io/spring-hateoas/docs/1.0.0.M1/reference/html/#mediatypes.hal-forms"&gt;HAL-FORMS&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://docs.spring.io/spring-hateoas/docs/1.0.0.M1/reference/html/#mediatypes.collection-json"&gt;Collection+JSON&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://docs.spring.io/spring-hateoas/docs/1.0.0.M1/reference/html/#mediatypes.uber"&gt;UBER&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;But why stop there?
-While we are planning to support other media types, it shouldn&amp;#8217;t stop you from creating your own.
-We&amp;#8217;ve introduce a new SPI that lets you write &lt;a href="https://docs.spring.io/spring-hateoas/docs/1.0.0.M1/reference/html/#mediatypes.custom"&gt;your own custom media type&lt;/a&gt; and register it with Spring HATEOAS so you can use it with Spring MVC, &lt;code&gt;RestTemplate&lt;/code&gt; beans, Spring WebFlux, and &lt;code&gt;WebClient&lt;/code&gt; beans.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="ref-docs"&gt;&lt;a class="anchor" href="#ref-docs"&gt;&lt;/a&gt;Updated and enhanced documentation&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Not sure if you&amp;#8217;ve noticed, but the Spring team has been upgrading all of its documentation.
-We have too!
-We have also started to &lt;a href="https://docs.spring.io/spring-hateoas/docs/1.0.0.M1/reference/html/"&gt;clean up and overhaul the content&lt;/a&gt;, so be sure to take a tour.
-We&amp;#8217;re going to tweak more of this in the upcoming milestones.
-Anything missing? Let us know! With over &lt;a href="https://docs.spring.io/spring-hateoas/docs/1.0.0.M1/changelog.txt"&gt;80 closed issues&lt;/a&gt;, be sure to check things out.
-And let us know what you think!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="spring-data-rest"&gt;&lt;a class="anchor" href="#spring-data-rest"&gt;&lt;/a&gt;Spring Data REST&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;One cannot discuss Spring HATEOAS without mentioning Spring Data REST.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;All of these changes coming with Spring HATEOAS are being picked up and adapted to in Spring Data REST&amp;#8217;s latest snapshot releases. The overall plan is for Spring Data - Release train &lt;strong&gt;Moore&lt;/strong&gt; to upgrade to Spring HATEOAS 1.0. That means things like affordances and new media types will become a part of Spring Data REST.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="spring-framework-5-1-support"&gt;&lt;a class="anchor" href="#spring-framework-5-1-support"&gt;&lt;/a&gt;Spring Framework 5.1 support&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Spring HATEOAS 1.0 is now based upon Spring Framework 5.1. This means that things like &lt;strong&gt;Forwarded&lt;/strong&gt; header handling is delegated to Spring Framework to manage. If you&amp;#8217;re proxy server in front of your application is sending proper headers, and your Spring HATEOAS powered API is suddenly NOT rewriting URIs, you need to configure header handling.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;If you are using Spring Boot, this is all you need:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre&gt;server.use-forward-headers=true&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;If you are NOT using Spring Boot, then you must configure something like this:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@Bean
-public FilterRegistrationBean&amp;lt;ForwardedHeaderFilter&amp;gt; forwardedHeaderFilter() {
-
-  var filter = new FilterRegistrationBean&amp;lt;&amp;gt;();
-  filter.setFilter(new ForwardedFilter());
-
-  return filter;
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;For more details check out &lt;a href="https://docs.spring.io/spring/docs/5.1.5.RELEASE/spring-framework-reference/web.html#filters-forwarded-headers"&gt;Spring Framework&amp;#8217;s Forwarded header filter&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Check out the project links below.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Links: &lt;a href="http://spring.io/projects/spring-hateoas"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-hateoas"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-hateoas/issues"&gt;Issues&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Being a milestone release, you&amp;#8217;ll find the artifacts at &lt;a href="https://repo.spring.io/libs-milestone" class="bare"&gt;https://repo.spring.io/libs-milestone&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Initializr: new UI</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/03/05/spring-initializr-new-ui" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Damien Vitrac</name>
-    </author>
-    <id>tag:spring.io,2019-03-04:3591</id>
-    <updated>2019-03-05T09:45:42Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I¡¯m happy to announce that &lt;strong&gt;Spring Initializr&lt;/strong&gt; has been updated and is now available on &lt;a href="https://start.spring.io"&gt;start.spring.io&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#a-short-history-of-spring-initializr" class="anchor" name="a-short-history-of-spring-initializr"&gt;&lt;/a&gt;A short history of Spring Initializr&lt;/h2&gt;
-&lt;p&gt;The project started out as a minimal HTML form, letting you generate a Spring Boot application with a few options. It&amp;rsquo;s been well received by the Spring community, so the team added new ways to interact with it, through the command-line or your favorite IDE.&lt;/p&gt;
-&lt;p&gt;After a while, we decided to work on a first revision of the UI. We simplified the form, leaving the essential parts front and center and pushing others in a section hidden by default. Given the number of dependencies, we created a search box to look for available starters.&lt;/p&gt;
-&lt;p&gt;The project is now a popular service and even a library that you can use and extend for your own needs. These days, the Web UI is not even the most popular client, but we&amp;rsquo;re still committed to work and improve the service.&lt;/p&gt;&lt;h2&gt;&lt;a href="#rationale-behind-the-new-web-design" class="anchor" name="rationale-behind-the-new-web-design"&gt;&lt;/a&gt;Rationale behind the new Web design&lt;/h2&gt;
-&lt;p&gt;Let&amp;rsquo;s take a look at the updated design.&lt;/p&gt;
-&lt;img src="https://i.imgur.com/SBl70J1.png" /&gt;
-&lt;p&gt;The Spring Initializr team has been tempted many times to add new features and options, or solve new problems. Should we generate complex builds to work around projects&amp;rsquo; limitations? Should we add more opinions around how to build, distribute or run your Spring Boot application in production? Should we turn it in a full-blown Spring Boot starter marketplace?&lt;/p&gt;
-&lt;p&gt;With this new revision, the design in general had a (much needed) refresh and we chose to not display anymore the full list of available dependencies. One could see that list as a way to work around poor project metadata (&lt;a href="https://github.com/spring-io/start.spring.io/commit/359770b9e1e2e92be623788f3bdaecc515af84ee"&gt;we should&lt;/a&gt; &lt;a href="https://github.com/spring-io/start.spring.io/commit/ed082500830091e415cba6b2a99961037de97ed9"&gt;improve those!&lt;/a&gt;) or a lack of discovery mechanism on the spring.io website (&lt;a href="https://github.com/spring-io/sagan/issues/893"&gt;we should fix that!&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;While we recognize its current limitations, we feel that &amp;ldquo;quickly bootstrapping a Spring Boot application that just runs&amp;rdquo; is still the core promise of our service and developers should know what type of application they want to build when creating a project.&lt;br/&gt;Still, we think that the Spring Boot team could do more about helping developers to grow and update their applications, so we&amp;rsquo;re working on expanding what Spring Initializr can do (see our&lt;br/&gt;&lt;a href="https://spring.io/blog/2019/02/20/what-s-new-with-spring-initializr"&gt;previous blog post&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;This new revision is a new step towards more changes on &lt;a href="https://start.spring.io"&gt;start.spring.io&lt;/a&gt;, so stay tuned!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>java-cfenv 1.0 GA Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/03/04/java-cfenv-1-0-ga-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Mark Pollack</name>
-    </author>
-    <id>tag:spring.io,2019-03-04:3593</id>
-    <updated>2019-03-04T22:11:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;The java-cfenv library is a new library for accessing Cloud Foundry Services.  For Spring Boot users, it extracts service credentials from the &lt;code&gt;VCAP_SERVICES&lt;/code&gt; environment variable and sets well known Spring Boot auto-configuration properties.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;You can find more about it in the &lt;a href="https://spring.io/blog/2019/02/15/introducing-java-cfenv-a-new-library-for-accessing-cloud-foundry-services"&gt;1.0 M1 release blog&lt;/a&gt; as well as the &lt;a href="https://github.com/pivotal-cf/java-cfenv/blob/master/README.adoc"&gt;README&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;In this release the following Cloud Foundry Services are supported&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Databases - DB2, MySQL, Oracle, Postgresql, SqlServer&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;RabbitMQ&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Cassandra&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;MongoDB&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Redis&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Pivotal Single Sign On&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Of note, there is a new interface, &lt;a href="https://github.com/pivotal-cf/java-cfenv/blob/master/java-cfenv-boot/src/main/java/io/pivotal/cfenv/spring/boot/CfEnvProcessor.java"&gt;CfEnvProcessor&lt;/a&gt; that simplifies what you need to write in order to provide integration with other Cloud Foundry services.  The docs on &lt;a href="https://github.com/pivotal-cf/java-cfenv#supporting-other-services"&gt;supporting other services&lt;/a&gt; has the details.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The 1.0 release is available in maven central through the dependency&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&amp;lt;dependency&amp;gt;
-  &amp;lt;groupId&amp;gt;io.pivotal.cfenv&amp;lt;/groupId&amp;gt;
-  &amp;lt;artifactId&amp;gt;java-cfenv-boot&amp;lt;/artifactId&amp;gt;
-  &amp;lt;version&amp;gt;1.0.0.RELEASE&amp;lt;/version&amp;gt;
-&amp;lt;/dependency&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We will be releasing a 1.0.1.RELEASE shortly to fix issues in config server client configuration when using Pivotal Spring Cloud Services tile.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Thanks to &lt;a href="https://spring.io/team/scottfrederick"&gt;Scott Frederick&lt;/a&gt; and &lt;a href="https://spring.io/team/dturanski"&gt;David Turanski&lt;/a&gt; for their contributions!&lt;/p&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Reactor project lead St?phane Maldini</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/03/01/reactor-project-lead-st-phane-maldini" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2019-03-01:3590</id>
-    <updated>2019-03-01T03:10:18Z</updated>
-    <content type="html">&lt;p&gt;Hi Spring fans! This week I&amp;rsquo;m excited to sit down and talk with mr. Reactive himself, Reactor project lead St?phane Maldini. In this interview we talk about the history of the reactive programming for Spring, the Reactor project&amp;rsquo;s evolution over time, from then to now and looking forward.&lt;/p&gt;
-&lt;p&gt;the &lt;a href="http://ProjectReactor.io"&gt;Project Reactor website&lt;/a&gt;&lt;br/&gt;&lt;a href="@smaldini"&gt;St?phane on Twitter&lt;/a&gt;&lt;/p&gt;
-&lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/582654270&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>java-cfenv 1.0 RC1 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/02/27/java-cfenv-1-0-rc1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Mark Pollack</name>
-    </author>
-    <id>tag:spring.io,2019-02-27:3588</id>
-    <updated>2019-02-27T22:42:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;The java-cfenv library is new library for accessing Cloud Foundry Services.  For Spring Boot users, it extracts service credentials from the &lt;code&gt;VCAP_SERVICES&lt;/code&gt; environment variable and sets well known Spring Boot auto-configuration properties.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;In this release the following Cloud Foundry Services are supported&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Databases - DB2, MySQL, Oracle, Postgresql, SqlServer&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;RabbitMQ&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Cassandara&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;MongoDB&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Redis&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;In 1.0 RC1 two other modules were introduced that contain support for Pivotal¡¯s Spring Cloud Service and Single Sign on tiles. The &lt;code&gt;java-cfenv-boot-pivotal-scs&lt;/code&gt; module provides support for Config Server and &lt;code&gt;java-cfenv-boot-pivotal-sso&lt;/code&gt; module provides support for single sign on.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;There is a new interface, &lt;a href="https://github.com/pivotal-cf/java-cfenv/blob/master/java-cfenv-boot/src/main/java/io/pivotal/cfenv/spring/boot/CfEnvProcessor.java"&gt;CfEnvProcessor&lt;/a&gt; that simplifies what you need to write in order to provide integration with other Cloud Foundry services.  The docs on &lt;a href="https://github.com/pivotal-cf/java-cfenv#supporting-other-services"&gt;supporting other services&lt;/a&gt; has the details.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Thanks to &lt;a href="https://spring.io/team/scottfrederick"&gt;Scott Frederick&lt;/a&gt; and &lt;a href="https://spring.io/team/dturanski"&gt;David Turanski&lt;/a&gt; for their contributions!&lt;/p&gt;
-&lt;/div&gt;</content>
   </entry>
 </feed>

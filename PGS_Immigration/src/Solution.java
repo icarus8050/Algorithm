@@ -1,12 +1,27 @@
 
 public class Solution {
-
-	public static void main(String[] args) {
-		System.out.println(100000000000000d / 100000000d);
-	}
 	public long solution(int n, int[] times) {
-        long answer = 0;
-        double a = 100000000000000d;
-        return answer;
+        long max = 0;
+        for (int time : times) {
+        	if (max < time)
+        		max = time;
+        }
+        
+        long left = 1;
+        long right = (long) max * n;
+        
+        while (left <= right) {
+        	long mid = (left + right) / 2;
+        	long total = 0;
+        	
+        	for (int time : times)
+        		total += (mid / time);
+        	
+        	if (total >= n)
+        		right = mid - 1;
+        	else
+        		left = mid + 1;
+        }
+        return left;
     }
 }
