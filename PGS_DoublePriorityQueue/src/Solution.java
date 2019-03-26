@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
@@ -7,7 +7,7 @@ public class Solution {
 	public int[] solution(String[] operations) {
         int[] answer = {0, 0};
         
-        PriorityQueue<Integer> max_queue = new PriorityQueue<Integer>();
+        PriorityQueue<Integer> max_queue = new PriorityQueue<Integer>(Collections.reverseOrder());
         PriorityQueue<Integer> min_queue = new PriorityQueue<Integer>();
         StringTokenizer st;
         
@@ -21,9 +21,11 @@ public class Solution {
         		min_queue.offer(num);
         	} else if (!max_queue.isEmpty()){
         		if (num == 1) {
-        			removeElement(min_queue, max_queue.poll());
+        			int element = max_queue.poll();
+        			min_queue.remove(element);
         		} else {
-        			removeElement(max_queue, min_queue.poll());
+        			int element = min_queue.poll();
+        			max_queue.remove(element);
         		}
         	}
         }
@@ -33,15 +35,4 @@ public class Solution {
         }
         return answer;
     }
-	
-	public void removeElement(PriorityQueue<Integer> queue, int num) {
-		ArrayList<Integer> temp = new ArrayList<Integer>();
-		while (!queue.isEmpty()) {
-			int element = queue.poll();
-			if (element == num)
-				break;
-			temp.add(element);
-		}
-		queue.addAll(temp);
-	}
 }
