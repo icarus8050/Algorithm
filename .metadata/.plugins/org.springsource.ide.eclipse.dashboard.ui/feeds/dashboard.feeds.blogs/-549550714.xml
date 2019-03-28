@@ -5,7 +5,90 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2019-03-22T16:46:00Z</updated>
+  <updated>2019-03-26T19:34:00Z</updated>
+  <entry>
+    <title>This Week in Spring (Happy 15th Birthday Spring!) - March 26, 2019</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/03/26/this-week-in-spring-happy-15th-birthday-spring-march-26-2019" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2019-03-26:3613</id>
+    <updated>2019-03-26T19:34:00Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! I&amp;rsquo;m in Pleasanton, CA, visiting one of Pivotal&amp;rsquo;s large customers, and then tomorrow it&amp;rsquo;s off to New York City for my talk there at the Kafka Summit with the &lt;a href="http://twitter.com/tlberglund"&gt;excellent Tim Berglund&lt;/a&gt; and &lt;a href="http://twitter.com/WattersJames"&gt;James Watters&lt;/a&gt;. Join us! Then, next week it&amp;rsquo;s off to South Africa (for the SpringOne Tour shows in &lt;a href="https://springonetour.io/2019/cape-town"&gt;Capetown&lt;/a&gt; and &lt;a href="https://springonetour.io/2019/johannesburg"&gt;Johannesburg&lt;/a&gt;) and then it&amp;rsquo;s off &lt;a href="https://conference.mscc.mu/speaker/f2617bc2-d35e-4fd7-9cea-02060f3e1608"&gt;to Mauritius for the DevConf&lt;/a&gt; - if you&amp;rsquo;re in any of those places, &lt;a href="http://twitter.com/Starbuxman"&gt;don&amp;rsquo;t hesitate to say hi!&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Also, totally worth including that on Sunday Spring Framework marked the 15th anniversary of its release on the 25th of March, 2004! Happy 15th birthday, Spring! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/03/26/spring-cloud-stream-germantown-m1-2-2-0-m1-release-announcement"&gt;Spring Cloud Stream Germantown.M1 /2.2.0.M1 Release Announcement&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/03/22/spring-boot-for-apache-geode-pivotal-gemfire-1-0-0-m4-released"&gt;Spring Boot for Apache Geode &amp;amp; Pivotal GemFire 1.0.0.M4 Released!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/03/21/spring-initializr-updates"&gt;Spring Initializr updates&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;In last week&amp;rsquo;s &lt;a href="https://spring.io/blog/2019/03/21/a-bootiful-podcast-cqrs-with-axoniq-s-steven-van-beelen-and-pivotal-s-ben-wilcock"&gt;&lt;em&gt;A Bootiful Podcast&lt;/em&gt; installment I talked all things Axon and CQRS with AxonIQ&amp;rsquo;s Steven van Beelen and Pivotal&amp;rsquo;s Ben Wilcock&lt;/a&gt;. Don&amp;rsquo;t miss it!&lt;/li&gt;
+  &lt;li&gt;In last week&amp;rsquo;s (extra, and extra short) Spring Tips I looked at reactive MySQL support &lt;a href="https://spring.io/blog/2019/03/20/spring-tips-reactive-mysql-support-with-jasync-sql-and-r2dbc"&gt;with Jasync SQL and R2DBC&lt;/a&gt;. It&amp;rsquo;s fun to see all the new reactive options emerging.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/03/20/announcing-general-availability-of-spring-cloud-function-2-1-0-m1"&gt;Announcing General Availability of Spring Cloud Function - 2.1.0.M1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Want to learn all about Spring Cloud Contract from the source? Check out this OReilly media course &lt;a href="https://www.oreilly.com/library/view/hands-on-guide-to/9780135598436/"&gt;by Spring Cloud Contract founder Marcin Grzejszczak &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/springboot/status/1108750526433370112"&gt;The Spring Initializr now shows the dependencies again&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;Interesting insight from Roy T. Fielding, the creator of REST and one of the major contributors to HTTP itself, on what &amp;ldquo;REST&amp;rdquo; is: &amp;ldquo;I disagree that the popular understanding of the term is different. What is different is the desire of certain companies, authors, &lt;a href="https://twitter.com/fielding/status/1108092713516163072"&gt;and speakers to say REST when they know it is just HTTP; not because they don&amp;rsquo;t know the meaning&lt;/a&gt;. Put another way: don&amp;rsquo;t say &amp;rdquo;REST&amp;quot; when you&amp;rsquo;re not using things like hypermedia (HATEOAS). I need to do better here, too.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://thenewstack.io/spring-functions-serverless-and-you/"&gt;&lt;em&gt;Spring, Functions, Serverless and You&lt;/em&gt;, a nice post on The New Stack&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;this is a nice post on OAuth security with Spring &lt;a href="https://www.javacodegeeks.com/2019/03/quick-guide-oauth-spring-security.html"&gt;on the Java Code Geeks&lt;/a&gt;. Enjoy!&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud Stream Germantown.M1 /2.2.0.M1 Release Announcement</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/03/26/spring-cloud-stream-germantown-m1-2-2-0-m1-release-announcement" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Oleg Zhurakousky</name>
+    </author>
+    <id>tag:spring.io,2019-03-26:3612</id>
+    <updated>2019-03-26T17:05:50Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce the first Milestone of the Spring Cloud Stream Germantown release train - Germantown.M1/2.2.0.M1.&lt;/p&gt;
+&lt;p&gt;Spring Cloud Stream Germantown 2.2.0.M1 is available for use in the &lt;a href="http://repo.spring.io/libs-milestone-local/org/springframework/cloud/spring-cloud-stream/2.2.0.M1/"&gt;Spring Milestone&lt;/a&gt; repository. &lt;/p&gt;&lt;h3&gt;&lt;a href="#some-of-the-highlights" class="anchor" name="some-of-the-highlights"&gt;&lt;/a&gt;Some of the highlights:&lt;/h3&gt;&lt;h5&gt;&lt;a href="#improved-home-page-and-user-documentation" class="anchor" name="improved-home-page-and-user-documentation"&gt;&lt;/a&gt;Improved Home page and User Documentation&lt;/h5&gt;
+&lt;p&gt;Please check out our new &lt;a href="https://spring.io/projects/spring-cloud-stream#overview"&gt;home page&lt;/a&gt; and &lt;a href="https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/2.2.0.M1/home.html"&gt;user guide&lt;/a&gt;&lt;/p&gt;&lt;h5&gt;&lt;a href="#further-functional-programming-enhancements" class="anchor" name="further-functional-programming-enhancements"&gt;&lt;/a&gt;Further functional programming enhancements&lt;/h5&gt;
+&lt;p&gt;We&amp;rsquo;ve added additional &lt;a href="https://github.com/spring-cloud/spring-cloud-stream/issues/1590"&gt;functional programming enhancements and simplifications&lt;/a&gt; where you no longer required to provide &lt;code&gt;@EnableBinding&lt;/code&gt; annotation and in some cases you may not need spring.cloud.stream.definition` property. Consider the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@SpringBootApplication&#xD;
+public class SimpleFunctionRabbitDemoApplication {&#xD;
+&#xD;
+    public static void main(String[] args) throws Exception {&#xD;
+        SpringApplication.run(SimpleFunctionRabbitDemoApplication.class);&#xD;
+    }&#xD;
+&#xD;
+    @Bean&#xD;
+    public Function&amp;lt;String, String&amp;gt; echo() {&#xD;
+        return v -&amp;gt; v;&#xD;
+    }&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Without any additional property and/or annotation the above is a fully functioning Spring Cloud Stream application bound as &lt;code&gt;Processor&lt;/code&gt; based on what framework was able to determine from the above code. Subsequently the following would be bound as &lt;code&gt;Sink&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@SpringBootApplication&#xD;
+public class SimpleFunctionRabbitDemoApplication {&#xD;
+&#xD;
+    public static void main(String[] args) throws Exception {&#xD;
+        SpringApplication.run(SimpleFunctionRabbitDemoApplication.class);&#xD;
+    }&#xD;
+&#xD;
+    @Bean&#xD;
+    public Consumer&amp;lt;String&amp;gt; log() {&#xD;
+        return System.out::println;&#xD;
+    }&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice there is no longer &lt;code&gt;@EnableBinding&lt;/code&gt; annotation nor &lt;code&gt;spring.cloud.stream.function.definition&lt;/code&gt; property as the framework was able to determine the intention given that there is only one functional bean available in the application context. In the event there are more then one and/or if you want to &lt;a href="https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/2.2.0.M1/spring-cloud-stream.html#_functional_composition"&gt;compose function&lt;/a&gt; from several, you can still provide &lt;code&gt;spring.cloud.stream.function.definition&lt;/code&gt; property&lt;/p&gt;&lt;h5&gt;&lt;a href="#functional-kafka-streams" class="anchor" name="functional-kafka-streams"&gt;&lt;/a&gt;Functional Kafka Streams&lt;/h5&gt;
+&lt;p&gt;Keeping with the spirit of the main theme that we are driving in Germantown, the Kafka Streams binder also now supports writing applications using a functional programming model. Instead of using &lt;code&gt;StreamListener&lt;/code&gt; and &lt;code&gt;SendTo&lt;/code&gt; for composing your processors, you can simply define beans of type &lt;code&gt;java.util.Function|Consumer&lt;/code&gt; and the binder will delegate to appropriate bindings. This &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-binder-kafka/blob/master/spring-cloud-stream-binder-kafka-streams/src/test/java/org/springframework/cloud/stream/binder/kafka/streams/function/KafkaStreamsBinderWordCountFunctionTests.java#L175"&gt;feature is still evolving&lt;/a&gt; in Kafka Streams binder and watch this space for more improvements, details and sample applications as we progress through further milestones of Germantown.&lt;/p&gt;&lt;h5&gt;&lt;a href="#retry-template-per-binding" class="anchor" name="retry-template-per-binding"&gt;&lt;/a&gt;Retry template per binding&lt;/h5&gt;
+&lt;p&gt;Ability to configure RetryTemplate &lt;a href="https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/2.2.0.M1/spring-cloud-stream.html#_retry_template"&gt;per binding&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Numerous &lt;a href="https://github.com/spring-cloud/spring-cloud-stream/issues?q=milestone%3A2.2.0.M1+is%3Aclosed"&gt;enhancements and bug fixes&lt;/a&gt;. &lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;NOTE:&lt;br/&gt;If the applications are created from Spring Initializr, they need to add this BOM snippet in maven dependency management before the spring-cloud BOM declaration, otherwise you&amp;rsquo;ll end up with the latest snapshot:&lt;/p&gt;
+  &lt;pre&gt;&lt;code class="prettyprint"&gt;&amp;lt;dependency&amp;gt;&#xD;
+           &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+           &amp;lt;artifactId&amp;gt;spring-cloud-stream-dependencies&amp;lt;/artifactId&amp;gt;&#xD;
+           &amp;lt;version&amp;gt;Germantown.M1&amp;lt;/version&amp;gt;&#xD;
+           &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;&#xD;
+           &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;&#xD;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Also, please keep an eye on one of our newest &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-binder-aws-kinesis/releases/tag/v1.1.0.RELEASE"&gt;AWS Kinesis binder&lt;/a&gt; which was just released v1.1.0. &lt;/p&gt;&lt;h4&gt;&lt;a href="#next-steps" class="anchor" name="next-steps"&gt;&lt;/a&gt;Next Steps&lt;/h4&gt;
+&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-stream"&gt;Stackoverflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-stream/"&gt;GitHub&lt;/a&gt; or via &lt;a href="https://gitter.im/spring-cloud/spring-cloud-stream"&gt;Gitter&lt;/a&gt;. &lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Spring Boot for Apache Geode &amp; Pivotal GemFire 1.0.0.M4 Released!</title>
     <link rel="alternate" href="https://spring.io/blog/2019/03/22/spring-boot-for-apache-geode-pivotal-gemfire-1-0-0-m4-released" />
@@ -1025,196 +1108,5 @@ The Einstein release train of application starters now provide a &lt;a href="htt
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Flight of the Flux 1 - Assembly vs Subscription</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/03/06/flight-of-the-flux-1-assembly-vs-subscription" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Simon Basl?</name>
-    </author>
-    <id>tag:spring.io,2019-02-20:3570</id>
-    <updated>2019-03-06T15:41:00Z</updated>
-    <content type="html">&lt;p&gt;This blog post is the first in a series of posts that aim at providing a deeper look into &lt;a href="https://github.com/reactor/reactor-core"&gt;Reactor&lt;/a&gt;&amp;rsquo;s more advanced concepts and inner workings.&lt;/p&gt;
-&lt;p&gt;It is derived from my &lt;code&gt;Flight of the Flux&lt;/code&gt; talk, which content I found to be more adapted to a blog post format.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ll update the table below with links when the other posts are published, but here is the planned content:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Assembly vs Subscription (this post)&lt;/li&gt;
-  &lt;li&gt;Debugging caveats&lt;/li&gt;
-  &lt;li&gt;Concurrent Agnostic&lt;/li&gt;
-  &lt;li&gt;Schedulers and &lt;code&gt;publishOn&lt;/code&gt; vs &lt;code&gt;subscribeOn&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Inner workings: work stealing&lt;/li&gt;
-  &lt;li&gt;Inner workings: operator fusion&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;If you&amp;rsquo;re missing an introduction to &lt;em&gt;Reactive Streams&lt;/em&gt; and the basic concepts of Reactor, head out to the site&amp;rsquo;s &lt;a href="https://projectreactor.io/learn"&gt;learning section&lt;/a&gt; and the &lt;a href="https://projectreactor.io/docs/core/release/reference"&gt;reference guide&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Without further ado, let&amp;rsquo;s jump in:&lt;/p&gt;&lt;h2&gt;&lt;a href="#assembly-time" class="anchor" name="assembly-time"&gt;&lt;/a&gt;Assembly Time&lt;/h2&gt;
-&lt;p&gt;When you first learn about &lt;em&gt;Reactive Streams&lt;/em&gt; and &lt;em&gt;reactive programming&lt;/em&gt; on the JVM, the first thing you learn is the high-level relationship between &lt;code&gt;Publisher&lt;/code&gt; and &lt;code&gt;Subscriber&lt;/code&gt;: one produces data, the other consumes it. Simple right? Furthermore, it appears that the &lt;code&gt;Publisher&lt;/code&gt; &lt;strong&gt;pushes&lt;/strong&gt; data to the &lt;code&gt;Subscriber&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;But when working with Reactive Streams libraries like Reactor (or RxJava2), you quickly come across the following mantra:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Nothing Happens Until You Subscribe&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Sometimes, you might read that both libraries implement a &amp;ldquo;push-pull hybrid model&amp;rdquo;. Hang on a minute! &lt;strong&gt;pull&lt;/strong&gt;?&lt;/p&gt;
-&lt;p&gt;We&amp;rsquo;ll get back to it, but to understand that sentence you first need to realize that, by default, Reactor&amp;rsquo;s reactive types are &lt;em&gt;lazy&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Calling methods on a &lt;code&gt;Flux&lt;/code&gt; or &lt;code&gt;Mono&lt;/code&gt; (the &lt;em&gt;operators&lt;/em&gt;) doesn&amp;rsquo;t immediately trigger the behavior. Instead, a new instance of &lt;code&gt;Flux&lt;/code&gt; (or &lt;code&gt;Mono&lt;/code&gt;) is returned, on which you can continue composing further operators. You thus create a &lt;em&gt;chain of operators&lt;/em&gt; (or an operator acyclic graph), which represents your &lt;strong&gt;asynchronous processing pipeline&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;This &lt;strong&gt;declarative&lt;/strong&gt; phase is called &lt;strong&gt;assembly time&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s take an example where a client side application makes an HTTP request to a server, expecting an HttpResponse:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;Mono&amp;lt;HttpResponse&amp;gt; httpSource = makeHttpRequest();&#xD;
-Mono&amp;lt;Json&amp;gt; jsonSource = httpSource.map(req -&amp;gt; parseJson(req));&#xD;
-Mono&amp;lt;String&amp;gt; quote = jsonSource.map(json -&amp;gt; json.getString(&amp;quot;quote&amp;quot;));&#xD;
-//at this point, no HTTP request has been made
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This can be simplified using the fluent API:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;Mono&amp;lt;String&amp;gt; quote = makeHttpRequest()&#xD;
-    .map(req -&amp;gt; parseJson(req))&#xD;
-    .map(json -&amp;gt; json.getString(&amp;quot;quote&amp;quot;));
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Once you are done declaring your pipeline, there are two situations: either you pass the &lt;code&gt;Flux&lt;/code&gt;/&lt;code&gt;Mono&lt;/code&gt; representing the processing pipeline down to another piece of code or you trigger the pipeline.&lt;/p&gt;
-&lt;p&gt;The former means that the code to which you return the &lt;code&gt;Mono&lt;/code&gt; might apply other operators, resulting in a derived new pipeline. Since the operators create new instances (it&amp;rsquo;s like an onion), your own &lt;code&gt;Mono&lt;/code&gt; is not mutated, so it could be further decorated several times with widely different results:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;//you could derive a `Mono&amp;lt;String&amp;gt;` of odd-length strings vs even-length ones&#xD;
-Mono&amp;lt;String&amp;gt; evenLength = quote.filter(str -&amp;gt; str.length() % 2 == 0);&#xD;
-Mono&amp;lt;String&amp;gt; oddLength = quote.filter(str -&amp;gt; str.length() % 2 == 1);&#xD;
-&#xD;
-//or even a `Flux&amp;lt;String&amp;gt;` of words in a quote&#xD;
-Flux&amp;lt;String&amp;gt; words = quote.flatMapMany(quote -&amp;gt; Flux.fromArray(quote.split(&amp;quot; &amp;quot;)));&#xD;
-&#xD;
-//by this point, none of the 3 &amp;quot;pipelines&amp;quot; have triggered an HTTP request
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Compare that with a &lt;code&gt;CompletableFuture&lt;/code&gt;, which is not lazy in nature: once you have a reference to the &lt;code&gt;CompletableFuture&lt;/code&gt;, it means the processing is already ongoing&amp;hellip;&lt;/p&gt;
-&lt;p&gt;With that in mind, let&amp;rsquo;s look into how to trigger the reactive pipeline.&lt;/p&gt;&lt;h2&gt;&lt;a href="#subscription-time" class="anchor" name="subscription-time"&gt;&lt;/a&gt;Subscription Time&lt;/h2&gt;
-&lt;p&gt;So far, we&amp;rsquo;ve &lt;em&gt;assembled an asynchronous pipeline&lt;/em&gt;. That is, we&amp;rsquo;ve instantiated &lt;code&gt;Flux&lt;/code&gt; and &lt;code&gt;Mono&lt;/code&gt; variables through the use of &lt;em&gt;operators&lt;/em&gt;, that results other &lt;code&gt;Flux&lt;/code&gt;/&lt;code&gt;Mono&lt;/code&gt; with behavior layered like an onion.&lt;/p&gt;
-&lt;p&gt;But the data hasn&amp;rsquo;t started flowing through each of these declared pipelines yet.&lt;/p&gt;
-&lt;p&gt;That&amp;rsquo;s because the trigger for the data to flow is not the declaration of the pipeline, but rather the &lt;strong&gt;subscription&lt;/strong&gt; to it. Remember:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Nothing Happens Until You Subscribe&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Subscribing is the act of saying &amp;ldquo;ok, this pipeline represent a transformation of data, and I&amp;rsquo;m interested in the final form of that data&amp;rdquo;. The most common way of doing so is by calling &lt;code&gt;Flux.subscribe(valueConsumer, errorConsumer)&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;That signalling of interest is propagated backwards through the chain of operators, up until the &lt;em&gt;source&lt;/em&gt; operator, the &lt;code&gt;Publisher&lt;/code&gt; that actually produces the initial data:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;makeHttpRequest() //&amp;lt;5&amp;gt;&#xD;
-    .map(req -&amp;gt; parseJson(req)) //&amp;lt;4&amp;gt;&#xD;
-    .map(json -&amp;gt; json.getString(&amp;quot;quote&amp;quot;)) //&amp;lt;3&amp;gt;&#xD;
-    .flatMapMany(quote -&amp;gt; Flux.fromArray(quote.split(&amp;quot; &amp;quot;))) //&amp;lt;2&amp;gt;&#xD;
-    .subscribe(System.out::println, Throwable::printStackTrace); //&amp;lt;1&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-  &lt;li&gt;we subscribe to the words &lt;code&gt;Flux&lt;/code&gt;, stating that we want to print each word to the console (and print the stack trace of any error)&lt;/li&gt;
-  &lt;li&gt;that interest is signalled to the &lt;code&gt;flatMapMany&lt;/code&gt; step&amp;hellip;&lt;/li&gt;
-  &lt;li&gt;&amp;hellip;which signals it up the chain to the json &lt;code&gt;map&lt;/code&gt; step&amp;hellip;&lt;/li&gt;
-  &lt;li&gt;&amp;hellip;then the request &lt;code&gt;map&lt;/code&gt; step&amp;hellip;&lt;/li&gt;
-  &lt;li&gt;&amp;hellip;to finally reach the &lt;code&gt;makeHttpRequest()&lt;/code&gt; (which we&amp;rsquo;ll consider our source)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;At this point, the source is triggered. It generates the data in the appropriate way: here it would make an HTTP request to a JSON-producing endpoint and then emit the HTTP response.&lt;/p&gt;
-&lt;p&gt;From there on, we&amp;rsquo;re in &lt;em&gt;execution time&lt;/em&gt;. The data has started flowing through the pipeline (in the more natural top-to-bottom order, or &lt;em&gt;upstream&lt;/em&gt; to &lt;em&gt;downstream&lt;/em&gt;):&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;The &lt;code&gt;HttpResponse&lt;/code&gt; is emitted to the &lt;code&gt;parseJson&lt;/code&gt; &lt;code&gt;map&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;It extracts the JSON body and emits it to the &lt;code&gt;getString&lt;/code&gt; &lt;code&gt;map&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Which extracts the &lt;em&gt;quote&lt;/em&gt; and passes it to the &lt;code&gt;flatMapMany&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;The &lt;code&gt;flatMapMany&lt;/code&gt; splits the quote into words and emit each word individually&lt;/li&gt;
-  &lt;li&gt;The value handler in the &lt;code&gt;subscribe&lt;/code&gt; is notified of each word, printing these to the console, one per line&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Hopefully that helps you understand the difference between assembly time and subscription/execution time!&lt;/p&gt;&lt;h2&gt;&lt;a href="#cold-vs-hot" class="anchor" name="cold-vs-hot"&gt;&lt;/a&gt;Cold vs Hot&lt;/h2&gt;
-&lt;p&gt;Right after explaining the difference and introducing this mantra is probably a good time to introduce an exception :laughing: &lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Nothing happens until you subscribe&amp;hellip; &lt;strong&gt;until something does&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;&lt;h3&gt;&lt;a href="#cold" class="anchor" name="cold"&gt;&lt;/a&gt;Cold&lt;/h3&gt;
-&lt;p&gt;So far, we&amp;rsquo;ve been dealing with a flavor of &lt;code&gt;Flux&lt;/code&gt; and &lt;code&gt;Mono&lt;/code&gt; sources called a &lt;strong&gt;Cold &lt;code&gt;Publisher&lt;/code&gt;&lt;/strong&gt;. As we&amp;rsquo;ve explained, these &lt;code&gt;Publishers&lt;/code&gt; are lazy and only generate data when there is a &lt;code&gt;Subscription&lt;/code&gt;. Furthermore, they generate the data anew for each individual &lt;code&gt;Subscription&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;In our example of an HTTP response &lt;code&gt;Mono&lt;/code&gt;, the HTTP request would be performed for each subscription: &lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;Mono&amp;lt;String&amp;gt; evenLength = quote.filter(str -&amp;gt; str.length() % 2 == 0);&#xD;
-Mono&amp;lt;String&amp;gt; oddLength = quote.filter(str -&amp;gt; str.length() % 2 == 1);&#xD;
-Flux&amp;lt;String&amp;gt; words = quote.flatMapMany(quote -&amp;gt; Flux.fromArray(quote.split(&amp;quot; &amp;quot;)));&#xD;
-&#xD;
-evenLength.subscribe(); //this triggers an HTTP request&#xD;
-oddLength.subscribe(); //this triggers another HTTP request&#xD;
-words.subscribe(); //this triggers a third HTTP request
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;On a side note, some operators&amp;rsquo; behavior imply multiple subscriptions. For example &lt;code&gt;retry&lt;/code&gt; re-subscribe to its source in case of an error (&lt;code&gt;onError&lt;/code&gt; signal), while &lt;code&gt;repeat&lt;/code&gt; does the same for the &lt;code&gt;onComplete&lt;/code&gt; signal.&lt;/p&gt;
-&lt;p&gt;So for a cold source like the HTTP request, something like &lt;code&gt;retry&lt;/code&gt; would re-perform the request thus allowing to recover from a transient server-side error, for instance.&lt;/p&gt;&lt;h3&gt;&lt;a href="#hot" class="anchor" name="hot"&gt;&lt;/a&gt;Hot&lt;/h3&gt;
-&lt;p&gt;A &lt;strong&gt;Hot &lt;code&gt;Publisher&lt;/code&gt;&lt;/strong&gt; on the other hand isn&amp;rsquo;t as clear-cut: it doesn&amp;rsquo;t necessarily need a &lt;code&gt;Subscriber&lt;/code&gt; to start pumping data. It doesn&amp;rsquo;t necessarily re-generate dedicated data per each new &lt;code&gt;Subscriber&lt;/code&gt; either.&lt;/p&gt;
-&lt;p&gt;To illustrate that, let&amp;rsquo;s introduce a new cold publisher example, then we&amp;rsquo;ll show how to turn that &lt;em&gt;cold&lt;/em&gt; publisher into a &lt;em&gt;hot&lt;/em&gt; one:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;Flux&amp;lt;Long&amp;gt; clockTicks = Flux.interval(Duration.ofSeconds(1));&#xD;
-&#xD;
-clockTicks.subscribe(tick -&amp;gt; System.out.println(&amp;quot;clock1 &amp;quot; + tick + &amp;quot;s&amp;quot;);&#xD;
-&#xD;
-Thread.sleep(2000);&#xD;
-&#xD;
-clockTicks.subscribe(tick -&amp;gt; System.out.println(&amp;quot;\tclock2 &amp;quot; + tick + &amp;quot;s&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This prints:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;clock1 1s&#xD;
-clock1 2s&#xD;
-clock1 3s&#xD;
-    clock2 1s&#xD;
-clock1 4s&#xD;
-    clock2 2s&#xD;
-clock1 5s&#xD;
-    clock2 3s&#xD;
-clock1 6s&#xD;
-    clock2 4s
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We can turn the &lt;code&gt;clockTicks&lt;/code&gt; source into a hot one by invoking &lt;code&gt;share()&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;Flux&amp;lt;Long&amp;gt; coldTicks = Flux.interval(Duration.ofSeconds(1));&#xD;
-Flux&amp;lt;Long&amp;gt; clockTicks = coldTicks.share();&#xD;
-&#xD;
-clockTicks.subscribe(tick -&amp;gt; System.out.println(&amp;quot;clock1 &amp;quot; + tick + &amp;quot;s&amp;quot;);&#xD;
-&#xD;
-Thread.sleep(2000);&#xD;
-&#xD;
-clockTicks.subscribe(tick -&amp;gt; System.out.println(&amp;quot;\tclock2 &amp;quot; + tick + &amp;quot;s&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;It yields the following result instead:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;clock1 1s&#xD;
-clock1 2s&#xD;
-clock1 3s&#xD;
-    clock2 3s&#xD;
-clock1 4s&#xD;
-    clock2 4s&#xD;
-clock1 5s&#xD;
-    clock2 5s&#xD;
-clock1 6s&#xD;
-    clock2 6s&#xD;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You see that the two subscriptions now share the same ticks of the clock. &lt;code&gt;share()&lt;/code&gt; converts cold to hot by letting the source multicast elements to new &lt;code&gt;Subscribers&lt;/code&gt;, but &lt;strong&gt;only the elements that are emitted after these new subscriptions&lt;/strong&gt;. Since &lt;code&gt;clock2&lt;/code&gt; has subscribed 2 seconds later, it missed early emissions &lt;code&gt;1s&lt;/code&gt; and &lt;code&gt;2s&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;So hot publishers can be less lazy, even though they generally require at least an initial &lt;code&gt;Subscription&lt;/code&gt; to trigger data flow.&lt;/p&gt;&lt;h2&gt;&lt;a href="#conclusion" class="anchor" name="conclusion"&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;In this article, we&amp;rsquo;ve learned about the difference between instantiating a &lt;code&gt;Flux&lt;/code&gt; / chaining operator (aka &lt;strong&gt;Assembly time&lt;/strong&gt;), triggering it (aka &lt;strong&gt;Subscription time&lt;/strong&gt;) and executing it (aka &lt;strong&gt;Execution time&lt;/strong&gt;).&lt;/p&gt;
-&lt;p&gt;We&amp;rsquo;ve thus learned that &lt;code&gt;Flux&lt;/code&gt; and &lt;code&gt;Mono&lt;/code&gt; are mostly lazy (aka &lt;strong&gt;cold &lt;code&gt;Publisher&lt;/code&gt;&lt;/strong&gt;): &lt;strong&gt;nothing happens until you subscribe&lt;/strong&gt; to them.&lt;/p&gt;
-&lt;p&gt;Finally, we&amp;rsquo;ve learned about an alternative flavor of &lt;code&gt;Flux&lt;/code&gt; and &lt;code&gt;Mono&lt;/code&gt;, dubbed the &lt;strong&gt;hot &lt;code&gt;Publisher&lt;/code&gt;&lt;/strong&gt;, which behaves a little differently and is less lazy.&lt;/p&gt;
-&lt;p&gt;In the next instalment, we&amp;rsquo;ll see why these three phases make a major difference in how you as a developer would debug reactor-based code.&lt;/p&gt;
-&lt;p&gt;In the meantime, happy reactive coding!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring  - March 5th, 2019</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/03/05/this-week-in-spring-march-5th-2019" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2019-03-05:3594</id>
-    <updated>2019-03-05T23:29:54Z</updated>
-    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! I flew 14 hours to Tel Aviv, Israel. I then spent 28h on the ground visiting customers, visiting &lt;a href="https://twitter.com/starbuxman/status/1103056979201806337"&gt;my friends at Codota&lt;/a&gt;, and then presenting at a packed house at &lt;a href="https://twitter.com/odedia/status/1102610921908781056"&gt;the Israel Java User Group&lt;/a&gt;. Then I flew another 14 hours back to San Francisco, CA where I presented for a four-hour online course on using Kotlin with Spring Boot. Tonight I&amp;rsquo;ll fly to Atlanta, GA for the incredible DevNexus conference where I&amp;rsquo;ll be presenting (twice) with the &lt;a href="https://devnexus.com/presentations/3545/"&gt;good Dr. Venkat Subramaniam&lt;/a&gt; on Kotlin (and Spring) and more. Tomorrow, I&amp;rsquo;m doing &lt;a href="https://www.safaribooksonline.com/live-training/courses/bootiful-testing/0636920239550/"&gt;a four hour course on testing. Join me!&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;And, of course we&amp;rsquo;ve got a lot to get to today so let&amp;rsquo;s get to it! &lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/03/05/spring-hateoas-1-0-m1-released"&gt;Spring HATEOAS 1.0 M1 released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/03/05/spring-initializr-new-ui"&gt;Spring Initializr: new UI&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/03/04/java-cfenv-1-0-ga-released"&gt;java-cfenv 1.0 GA Released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/03/01/reactor-project-lead-st-phane-maldini"&gt;Reactor project lead St?phane Maldini&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/02/27/java-cfenv-1-0-rc1-released"&gt;java-cfenv 1.0 RC1 Released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/02/27/spring-vault-2-1-2-release-available"&gt;Spring Vault 2.1.2.RELEASE available&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;This post by Dan Baskette gives you a real world example of the power [of continuous integration and pipelines(&lt;a href="https://twitter.com/pivotal/status/1102688418620940290?s=12)"&gt;https://twitter.com/pivotal/status/1102688418620940290?s=12)&lt;/a&gt;, check it out.&lt;/li&gt;
-  &lt;li&gt;Pivotal now has three distinct Kubernetes offerings. Whatever you&amp;rsquo;re doing with Kubernetes, &lt;a href="https://twitter.com/benbravo73/status/1102676348185784320?s=12"&gt;we&amp;rsquo;ve got you covered!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Check out the &lt;a href="https://twitter.com/sdeleuze/status/1102619324404166656?s=12"&gt; exciting new Kotlin-support in the upcoming Spring Framework 5.2 with the &lt;code&gt;MockMvc&lt;/code&gt; DSL. The next step is the Spring REST Docs Kotlin DSL&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.infoq.com/presentations/dell-pcf-boot-rest?itm_source=infoq&amp;itm_medium=popular_widget&amp;itm_campaign=popular_content_list&amp;itm_content="&gt;What We&amp;rsquo;re Learning Adopting Spring Boot and PCF for Dell.com&amp;rsquo;s eCommerce&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Maciej Walkowiak has updates on the &lt;a href="https://twitter.com/maciejwalkowiak/status/1102520792489881601?s=12"&gt;the Spring Cloud Stream SQS&amp;hellip;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Framework test lead &lt;a href="https://twitter.com/sam_brannen/status/1101527484913332230?s=12"&gt;and JUnit lead Sam Brannen says that Spring Framework 5.2 will support &lt;code&gt;ApplicationEvent&lt;/code&gt; consumption for the Spring &lt;code&gt;TestContext&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Check out how simple it is to integrate &lt;a href="https://twitter.com/pczarkowski/status/1101528946800316421?s=12"&gt;Spring Cloud applications with Kubernetes to allow you to use values in configmaps and secrets as dynamic application properties.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Are you using Project Riff and want to know more about KNative? Check out &lt;a href="https://twitter.com/brianmmcclain/status/1096510041501372421?s=12"&gt;Brian McClain&amp;rsquo;s book, &amp;ldquo;Getting Started With Knative&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;This is an interesting example of how to &lt;a href="https://github.com/rashidi/boot-data-rest-events-sample"&gt;use Spring Data events to perform validation.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Auth0 has a nice tutorial on &lt;a href="https://auth0.com/blog/amp/spring-data-rest-tutorial-developing-rest-apis-with-ease/"&gt;Spring Data REST and developing RESTful APIs with Ease&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;The Codecentric blog has a nice post on &lt;a href="https://blog.codecentric.de/en/2019/02/how-to-package-your-frontend-in-a-spring-boot-app-with-parceljs/"&gt;how to package your frontend in a Spring Boot App with ParcelJS &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Profiles in &lt;a href="http://www.profesor-p.com/2019/02/28/perfiles-en-spring-boot/"&gt;Spring Boot&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Netifi&amp;rsquo;s CEO has a nice post on how &lt;a href="https://twitter.com/netifi_inc/status/1100821621231808513"&gt;developers benefit from reactive streams, as explained by their CTO(go to 42:55 mark)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Oleh Dokuka has some good insight on the key differences between &lt;code&gt;CompletableFuture&lt;/code&gt; and &lt;code&gt;Mono&lt;/code&gt; &lt;a href="https://twitter.com/olehdokuka/status/1100027900475129856?s=12"&gt;from Project Reactor&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Check out this video showing how to deploy a &lt;a href="https://twitter.com/brunoborges/status/1100913233949413376?s=12"&gt; Spring Boot application to Kubernetes using Helm + Draft + JFrog and Azure Pipelines &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Check out &lt;a href="https://twitter.com/cloudnativeguy/status/1100826590299201542?s=12"&gt;James Williams&amp;rsquo; Pivotal blog, with input from folks from Snyk Security and Atomist, on a new software solution segment. They are &amp;quot;code&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
   </entry>
 </feed>
