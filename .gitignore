@@ -13,9 +13,8 @@ HELP.md
 .sts4-cache
 .metadata
 .recommenders
-
-
 .bin
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
