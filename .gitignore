@@ -15,7 +15,8 @@ HELP.md
 .recommenders
 
 
-.bin### IntelliJ IDEA ###
+.bin
+### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
