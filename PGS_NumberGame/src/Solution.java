@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Solution {
 
@@ -9,23 +7,11 @@ public class Solution {
 		
         Arrays.sort(A);
         Arrays.sort(B);
-        int len = A.length;
-        List<Integer> listA = new ArrayList<>();
-        List<Integer> listB = new ArrayList<>();
         
-        for (int i = 0; i < len; i++) {
-        	listA.add(A[i]);
-        	listB.add(B[i]);
-        }
-        
-        while (!listA.isEmpty()) {
-        	if (listA.get(listA.size() - 1) >= listB.get(listB.size() - 1)) {
-        		listA.remove(listA.size() - 1);
-        		listB.remove(0);
-        	} else {
-        		listA.remove(listA.size() - 1);
-        		listB.remove(listB.size() - 1);
+        for (int i = A.length - 1, j = B.length - 1; i >= 0; i--) {
+        	if (B[j] > A[i]) {
         		answer++;
+        		j--;
         	}
         }
         
