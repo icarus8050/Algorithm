@@ -17,7 +17,6 @@ public class Solution {
 	      while (b > 0) {
 	    	  answer[idx--]++;
 	    	  b--;
-	    	  if (idx == 0) idx = answer.length - 1;
 	      }
 	      
 	      return answer;
