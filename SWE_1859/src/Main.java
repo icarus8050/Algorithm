@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
 
-	static long[] cost = new long[100001];
+	static long[] cost = new long[1000001];
 	static int N;
 	static long ans;
 	public static void main(String[] args) {
