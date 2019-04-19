@@ -37,10 +37,12 @@ public class Main {
 		}
 		
 		for (int i = 1; i <= N; i++) {
+			Arrays.fill(visited, false);
 			if (dfs(i, heavier) > mid) {
 				ans++;
 				continue;
 			}
+			
 			Arrays.fill(visited, false);
 			if (dfs(i, lighter) > mid) {
 				ans++;
@@ -52,11 +54,10 @@ public class Main {
 	}
 	
 	static int dfs(int node, List<Integer>[] adjList) {
-		
+		visited[node] = true;
 		int ret = 1;
 		for (int i = 0; i < adjList[node].size(); i++) {
 			if (!visited[adjList[node].get(i)]) {
-				visited[adjList[node].get(i)] = true;
 				ret += dfs(adjList[node].get(i), adjList);
 			}
 		}
