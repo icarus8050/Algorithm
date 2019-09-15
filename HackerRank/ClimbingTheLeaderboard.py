@@ -11,20 +11,38 @@ import sys
 def climbingLeaderboard(scores, alice):
     res = []
 
-    scoresList = sorted(set(scores), reverse=True)
+    scoresSet = sorted(set(scores), reverse=True)
 
     for aliceScore in alice:
-        rank = 1
-
-        for score in scoresList:
-            if aliceScore >= score:
-                break
-
-            rank += 1
-
-        res.append(rank)
+        if aliceScore >= scoresSet[0]:
+            res.append(1)
+        elif aliceScore < scoresSet[len(scoresSet) - 1]:
+            res.append(len(scoresSet) + 1)
+        else:
+            res.append(binarySearch(scoresSet, aliceScore))
 
     return res
+
+
+def binarySearch(arr, value):
+    left = 0
+    right = len(arr) - 1
+
+    while right >= left:
+        mid = (left + right) // 2
+
+        if arr[mid] == value:
+            return mid + 1
+        elif arr[mid] > value and arr[mid + 1] < value:
+            return mid + 2
+        elif arr[mid] < value and arr[mid - 1] > value:
+            return mid + 1
+        elif arr[mid] > value:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    return -1
 
 
 if __name__ == '__main__':
