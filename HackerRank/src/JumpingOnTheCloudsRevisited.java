@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class JumpingOnTheClouds {
+public class JumpingOnTheCloudsRevisited {
 
     // Complete the jumpingOnClouds function below.
     static int jumpingOnClouds(int[] c, int k) {
