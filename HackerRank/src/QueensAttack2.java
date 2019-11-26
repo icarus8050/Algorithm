@@ -101,9 +101,9 @@ public class QueensAttack2 {
         result += (cL_obstacle != -1) ? (c_q - cL_obstacle - 1) : c_q - 1;  //left
 
         result += (rTR_obstacle != -1) ? (cTR_obstacle - c_q - 1) : Math.min(n - c_q, n - r_q); //top right
-        result += (rBR_obstacle != -1) ? (rBR_obstacle - r_q - 1) : Math.min(n - c_q, n - 1); //bottom right
+        result += (rBR_obstacle != -1) ? (cBR_obstacle - c_q - 1) : Math.min(n - c_q, r_q - 1); //bottom right
         result += (rBL_obstacle != -1) ? (c_q - cBL_obstacle - 1) : Math.min(c_q - 1, r_q - 1); //bottom left
-        result += (rTL_obstacle != -1) ? (c_q - cTL_obstacle - 1) : Math.min(c_q - 1, n - r_q); //top left
+        result += (cTL_obstacle != -1) ? (c_q - cTL_obstacle - 1) : Math.min(c_q - 1, n - r_q); //top left
 
         bw.write(String.valueOf(result));
         bw.newLine();
@@ -131,7 +131,7 @@ public class QueensAttack2 {
     }
 
     private static boolean isBottomMinObstacle(int r_q, int c_q, int row_obstacle, int col_obstacle) {
-        return (r_q > row_obstacle && col_obstacle == c_q) && (rB_obstacle > row_obstacle || rB_obstacle == -1);
+        return (r_q > row_obstacle && col_obstacle == c_q) && (row_obstacle > rB_obstacle || rB_obstacle == -1);
     }
 
     private static boolean isBottomLeftMinObstacle(int r_q, int c_q, int row_obstacle, int col_obstacle) {
@@ -145,7 +145,6 @@ public class QueensAttack2 {
 
     private static boolean isTopLeftMinObstacle(int r_q, int c_q, int row_obstacle, int col_obstacle) {
         return (row_obstacle - r_q == c_q - col_obstacle && row_obstacle > r_q && c_q > col_obstacle)
-                && (rTL_obstacle > row_obstacle && col_obstacle > cTL_obstacle) || rTL_obstacle == -1;
+                && ((rTL_obstacle > row_obstacle && col_obstacle > cTL_obstacle) || rTL_obstacle == -1);
     }
-
 }
