@@ -18,6 +18,9 @@ public class BOJ_14502 {
     static final int WALL = 1;
     static final int VIRUS = 2;
 
+    static int virusCnt = 0;
+    static int wallCnt = 0;
+
     static final int[] dy = {1, 0, -1, 0};
     static final int[] dx = {0, 1, 0, -1};
 
@@ -35,12 +38,14 @@ public class BOJ_14502 {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < M; j++) {
                 map[i][j] = Integer.parseInt(st.nextToken());
+                if (map[i][j] == WALL)
+                    wallCnt++;
             }
         }
 
         dfs(0);
 
-        bw.write(ans + "\n");
+        bw.write(((N * M) - (wallCnt + 3 + ans)) + "\n");
         bw.flush();
         bw.close();
         br.close();
@@ -48,6 +53,7 @@ public class BOJ_14502 {
 
     public static void dfs(int depth) {
         if (depth == 3) {
+            virusCnt = 0;
             visited = new boolean[N][M];
 
             for (int i = 0; i < N; i++) {
@@ -58,7 +64,10 @@ public class BOJ_14502 {
                 }
             }
 
-            ans = Math.max(ans, checkSafeArea());
+            if (ans == 0)
+                ans = virusCnt;
+            else
+                ans = Math.min(ans, virusCnt);
 
         } else {
             for (int i = 0; i < N; i++) {
@@ -75,12 +84,13 @@ public class BOJ_14502 {
 
     public static void spreadsTheVirus(int x, int y) {
         visited[y][x] = true;
+        virusCnt++;
 
         for (int i = 0; i < 4; i++) {
             int nx = x + dx[i];
             int ny = y + dy[i];
 
-            if (isValidArea(nx, ny) && map[y][x] == VIRUS) {
+            if (isValidArea(nx, ny) && map[ny][nx] == EMPTY && !visited[ny][nx]) {
                 spreadsTheVirus(nx, ny);
             }
         }
