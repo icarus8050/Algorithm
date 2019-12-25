@@ -96,18 +96,6 @@ public class BOJ_14502 {
         }
     }
 
-    public static int checkSafeArea() {
-        int res = 0;
-
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < M; j++) {
-                if (map[i][j] == WALL) res++;
-            }
-        }
-
-        return res;
-    }
-
     public static boolean isValidArea(int x, int y) {
         return (x >= 0 && x < M) && (y >= 0 && y < N);
     }
