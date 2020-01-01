@@ -1,4 +1,6 @@
 import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class BeautifulTriplets {
 
@@ -6,26 +8,17 @@ public class BeautifulTriplets {
     static int beautifulTriplets(int d, int[] arr) {
         int ans = 0;
 
-        for (int i = 0; i < arr.length - 2; i++) {
-            for (int j = i + 1; j < arr.length - 1; j++) {
+        Map<Integer, Integer> map = new HashMap<>();
 
-                if (arr[j] - arr[i] > d) break;
-                else if (arr[j] - arr[i] < d) continue;
+        for (int i : arr) {
+            if (!map.containsKey(i)) {
+                map.put(i, 1);
+            } else {
+                map.put(i, map.get(i) + 1);
+            }
 
-                boolean flag = false;
-
-                for (int k = j + 1; k < arr.length; k++) {
-
-                    if (arr[k] - arr[j] > d)
-                        break;
-                    else if (arr[k] - arr[j] == d) {
-                        flag = true;
-                        ans++;
-                        break;
-                    }
-                }
-
-                if (flag) break;
+            if (map.containsKey(i - d) && map.containsKey(i - (d * 2))) {
+                ans += map.get(i - d) * map.get(i - (d * 2));
             }
         }
 
