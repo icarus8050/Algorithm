@@ -7,13 +7,10 @@ public class HalloweenSale {
         // Return the number of games you can buy
         int res = 0;
 
-        while (s > m) {
-            if (p > m) {
-                s -= p;
-                p -= d;
-            } else {
-                s -= m;
-            }
+        while (s >= p) {
+            s -= p;
+            p = Math.max(p - d, m);
+
             res++;
         }
 
