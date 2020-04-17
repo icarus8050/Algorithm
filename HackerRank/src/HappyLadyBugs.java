@@ -26,13 +26,7 @@ public class HappyLadyBugs {
                 wrappedBoard[i] = board[i];
             }
 
-            Map<Character, Long> collect = Arrays.stream(wrappedBoard)
-                    .collect(Collectors.groupingBy(
-                            Character::charValue,
-                            Collectors.counting())
-                    );
-
-            bw.write(solve(collect));
+            bw.write(solve(wrappedBoard));
             bw.newLine();
         }
 
@@ -40,11 +34,35 @@ public class HappyLadyBugs {
         bw.close();
     }
 
-    public static String solve(Map<Character, Long> collect) {
+    public static String solve(Character[] wrappedBoard) {
 
-        for (Map.Entry<Character, Long> next : collect.entrySet()) {
-            if (!next.getKey().equals('_') && next.getValue() < 2)
-                return "NO";
+        Map<Character, Long> collect = Arrays.stream(wrappedBoard)
+                .collect(Collectors.groupingBy(
+                        Character::charValue,
+                        Collectors.counting())
+                );
+
+        if (collect.containsKey('_')) {
+            for (Map.Entry<Character, Long> next : collect.entrySet()) {
+                if (!next.getKey().equals('_') && next.getValue() < 2)
+                    return "NO";
+            }
+        } else {
+            Character prev = wrappedBoard[0];
+            int cnt = 0;
+
+            for (Character character : wrappedBoard) {
+                if (character.equals(prev)) {
+                    cnt++;
+                } else {
+                    if (cnt < 2) return "NO";
+
+                    prev = character;
+                    cnt = 1;
+                }
+            }
+
+            if (cnt < 2) return "NO";
         }
 
         return "YES";
