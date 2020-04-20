@@ -2,7 +2,8 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Stack;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 키로거 (https://www.acmicpc.net/problem/5397)
@@ -15,42 +16,36 @@ public class BOJ_5397 {
         int t = Integer.parseInt(br.readLine());
 
         while (t-- > 0) {
-            Stack<String> front = new Stack<>();
-            Stack<String> back = new Stack<>();
+            char[] inputs = br.readLine().toCharArray();
+            List<Character> keys = new ArrayList<>();
+            int cursor = 0;
 
-            String[] keys = br.readLine().split("");
+            for (char input : inputs) {
+                switch (input) {
+                    case '<':
+                        if (cursor != 0) {
+                            cursor--;
+                        }
+                        break;
+                    case '>':
+                        if (cursor != keys.size()) {
+                            cursor++;
+                        }
+                        break;
+                    case '-':
+                        if (cursor != 0) {
+                            keys.remove(--cursor);
+                        }
+                        break;
+                    default:
+                        keys.add(cursor++, input);
 
-            for (String key : keys) {
-                if (key.equals("<")) {
-                    if (!front.isEmpty()) {
-                        String val = front.pop();
-                        back.push(val);
-                    }
-                } else if (key.equals(">")) {
-                    if (!back.isEmpty()) {
-                        String val = back.pop();
-                        front.push(val);
-                    }
-                } else if (key.equals("-")) {
-                    if (!front.isEmpty()) {
-                        front.pop();
-                    }
-                } else {
-                    front.push(key);
                 }
             }
 
-            StringBuilder sb = new StringBuilder();
-
-            while (!back.isEmpty()) {
-                sb.append(back.pop());
+            for (Character key : keys) {
+                bw.write(key);
             }
-
-            while (!front.isEmpty()) {
-                sb.insert(0, front.pop());
-            }
-
-            bw.write(sb.toString());
             bw.newLine();
         }
 
