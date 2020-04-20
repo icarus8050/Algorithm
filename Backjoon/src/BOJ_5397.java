@@ -2,8 +2,8 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 /**
  * 키로거 (https://www.acmicpc.net/problem/5397)
@@ -16,36 +16,45 @@ public class BOJ_5397 {
         int t = Integer.parseInt(br.readLine());
 
         while (t-- > 0) {
-            char[] inputs = br.readLine().toCharArray();
-            List<Character> keys = new ArrayList<>();
-            int cursor = 0;
+            Deque<Character> front = new ArrayDeque<>();
+            Deque<Character> back = new ArrayDeque<>();
 
-            for (char input : inputs) {
-                switch (input) {
+            char[] chars = br.readLine().toCharArray();
+
+            for (char aChar : chars) {
+                switch (aChar) {
                     case '<':
-                        if (cursor != 0) {
-                            cursor--;
+                        if (!front.isEmpty()) {
+                            back.addFirst(front.pollLast());
                         }
                         break;
                     case '>':
-                        if (cursor != keys.size()) {
-                            cursor++;
+                        if (!back.isEmpty()) {
+                            front.addLast(back.pollFirst());
                         }
                         break;
                     case '-':
-                        if (cursor != 0) {
-                            keys.remove(--cursor);
+                        if (!front.isEmpty()) {
+                            front.pollLast();
                         }
                         break;
                     default:
-                        keys.add(cursor++, input);
-
+                        front.addLast(aChar);
+                        break;
                 }
             }
 
-            for (Character key : keys) {
-                bw.write(key);
+            StringBuilder sb = new StringBuilder();
+
+            while (!front.isEmpty()) {
+                sb.append(front.pollFirst());
             }
+
+            while (!back.isEmpty()) {
+                sb.append(back.pollFirst());
+            }
+
+            bw.write(sb.toString());
             bw.newLine();
         }
 
