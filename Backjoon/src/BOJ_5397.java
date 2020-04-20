@@ -2,8 +2,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.LinkedList;
 
 /**
  * 키로거 (https://www.acmicpc.net/problem/5397)
@@ -16,8 +15,8 @@ public class BOJ_5397 {
         int t = Integer.parseInt(br.readLine());
 
         while (t-- > 0) {
-            Deque<Character> front = new ArrayDeque<>();
-            Deque<Character> back = new ArrayDeque<>();
+            LinkedList<Character> front = new LinkedList<>();
+            LinkedList<Character> back = new LinkedList<>();
 
             char[] chars = br.readLine().toCharArray();
 
