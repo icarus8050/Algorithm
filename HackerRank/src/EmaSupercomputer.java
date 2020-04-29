@@ -97,20 +97,6 @@ public class EmaSupercomputer {
         }
 
         public boolean overlaps(Plus target) {
-            if (this.x != target.x && this.y == target.y) {
-                if ((target.x >= this.x - this.len && target.x <= this.x + this.len)
-                        || (target.x < this.x - this.len && target.x + target.len >= this.x - this.len)
-                        || (target.x > this.x + this.len && target.x - target.len <= this.x + this.len))
-                    return true;
-            }
-
-            if (this.y != target.y && this.x == target.x) {
-                if ((target.y >= this.y - this.len && target.y <= this.y + this.len)
-                        || (target.y < this.y - this.len && target.y + target.len >= this.y - this.len)
-                        || (target.y > this.y + this.len && target.y - target.len <= this.y + this.len))
-                    return true;
-            }
-
             boolean[][] grid = new boolean[r][c];
 
             for(int i = this.x - this.len; i <= this.x + this.len; i++) {
