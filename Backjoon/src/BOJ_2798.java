@@ -30,13 +30,10 @@ public class BOJ_2798 {
             for (int j = i - 1; j >= 1; j--) {
                 for (int k = j - 1; k >= 0; k--) {
                     if (M >= cards[i] + cards[j] + cards[k]) {
-                        ans = cards[i] + cards[j] + cards[k];
-                        break;
+                        ans = Math.max(ans, cards[i] + cards[j] + cards[k]);
                     }
                 }
-                if (ans != 0) break;
             }
-            if (ans != 0) break;
         }
 
         bw.write(ans + "\n");
