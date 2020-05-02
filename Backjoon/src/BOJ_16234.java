@@ -37,8 +37,10 @@ public class BOJ_16234 {
         }
 
         ans = 0;
-        boolean flag = false;
-        while (true) {
+        boolean flag = true;
+        while (flag) {
+            flag = false;
+            ans++;
             visited = new boolean[N][N];
 
             for (int i = 0; i < N; i++) {
@@ -50,32 +52,25 @@ public class BOJ_16234 {
                     }
                 }
             }
-
-            if (!flag) {
-                break;
-            }
-
-            ans++;
-            flag = false;
         }
 
-        bw.write(ans + "\n");
+        bw.write((ans - 1) + "\n");
         bw.flush();
         br.close();
         bw.close();
     }
 
     static boolean bfs(int x, int y) {
-        List<Point> points = new ArrayList<>();
         int totalPopulation = 0;
+        List<Point> points = new ArrayList<>();
         Queue<Point> queue = new LinkedList<>();
         Point first = new Point(x, y);
         queue.offer(first);
         points.add(first);
+        visited[y][x] = true;
 
         while (!queue.isEmpty()) {
             Point current = queue.poll();
-            visited[current.y][current.x] = true;
             totalPopulation += map[current.y][current.x];
 
             for (int i = 0; i < 4; i++) {
@@ -86,6 +81,7 @@ public class BOJ_16234 {
                     Point neighborPoint = new Point(nx, ny);
                     queue.offer(neighborPoint);
                     points.add(neighborPoint);
+                    visited[ny][nx] = true;
                 }
             }
         }
