@@ -44,4 +44,42 @@ public class LongestPalindromicSubstring {
         }
         return s.substring((lpsCenter - lpsRadius + 1) / 2, (lpsCenter + lpsRadius - 1) / 2);
     }
+
+    public String longestPalindrome2(String s) {
+        char[] sharpString = new char[s.length() * 2 + 1];
+        sharpString[0] = '#';
+        for (int i = 0; i < s.length(); i++) {
+            sharpString[i * 2 + 1] = s.charAt(i);
+            sharpString[i * 2 + 2] = '#';
+        }
+
+        int[] dp = new int[sharpString.length];
+        int palCenter = 0, palRadius = 0;
+        int resCenter = 0, resRadius = 0;
+
+        int size = sharpString.length;
+        for (int i = 0; i < size; i++) {
+            dp[i] = palCenter + palRadius > i ?
+                    Math.min(dp[palCenter * 2 - i], (palCenter + palRadius) - i)
+                    : 1;
+
+            while (i + dp[i] < size
+                    && i - dp[i] >= 0
+                    && sharpString[i + dp[i]] == sharpString[i - dp[i]]) {
+                dp[i]++;
+            }
+
+            if (palCenter + palRadius < i + dp[i]) {
+                palCenter = i;
+                palRadius = dp[i];
+            }
+
+            if (resRadius < dp[i]) {
+                resCenter = i;
+                resRadius = dp[i];
+            }
+        }
+
+        return s.substring((resCenter - resRadius + 1) / 2, (resCenter + resRadius - 1) / 2);
+    }
 }
