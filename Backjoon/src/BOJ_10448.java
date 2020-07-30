@@ -8,38 +8,34 @@ import java.io.OutputStreamWriter;
  */
 public class BOJ_10448 {
 
-    static int k;
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int t = Integer.parseInt(br.readLine());
+        boolean[][] table = new boolean[3][1001];
+        int u;
+        for (int i = 1; (u = i * (i + 1) / 2) < 1000; i++) {
+            table[0][u] = true;
 
+            for (int j = 1; j <= 2; j++) {
+                for (int k = u + 1; k <= 1000; k++) {
+                    if (table[j - 1][k - u]) table[j][k] = true;
+                }
+            }
+        }
+
+        int t = Integer.parseInt(br.readLine());
         while (t-- > 0) {
-            k = Integer.parseInt(br.readLine());
-            if (dfs(0, 1, 0)) {
-                bw.write(1 + "\n");
+            int num = Integer.parseInt(br.readLine());
+            if (table[2][num]) {
+                bw.write("1\n");
             } else {
-                bw.write(0 + "\n");
+                bw.write("0\n");
             }
         }
 
         bw.flush();
         bw.close();
         br.close();
-    }
-
-    static boolean dfs(int count, int idx, int total) {
-        if (count > 3) return false;
-        if (count == 3 && total == k) return true;
-        if (total > k) return false;
-
-        for (int i = idx; i <= k; i++) {
-            boolean ans = dfs(count + 1, i, total + (i * (i + 1) / 2));
-
-            if (ans) return true;
-        }
-
-        return false;
     }
 }
