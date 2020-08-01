@@ -16,7 +16,6 @@ public class BOJ_2294 {
         String[] nk = br.readLine().split(" ");
         int n = Integer.parseInt(nk[0]);
         int k = Integer.parseInt(nk[1]);
-        int ans = Integer.MAX_VALUE;
         int[] dp = new int[k + 1];
         Arrays.fill(dp, 1, k + 1, INF);
 
