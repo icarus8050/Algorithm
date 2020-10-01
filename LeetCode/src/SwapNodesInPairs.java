@@ -3,21 +3,7 @@
  */
 public class SwapNodesInPairs {
 
-    public static void main(String[] args) {
-        ListNode head = new ListNode(1,
-                new ListNode(2,
-                        new ListNode(
-                                3,
-                                new ListNode(4)
-                        )
-                )
-        );
-
-        ListNode listNode = swapPairs(head);
-        System.out.println("asdfasdf");
-    }
-
-    public static ListNode swapPairs(ListNode head) {
+    public ListNode swapPairs(ListNode head) {
         ListNode dummy = new ListNode();
         dummy.next = head;
 
@@ -32,7 +18,20 @@ public class SwapNodesInPairs {
         return dummy.next;
     }
 
-    private static void swap(ListNode temp) {
+    /**
+     * Recursive를 이용한 풀이
+     */
+    public ListNode swapPairsForRecursive(ListNode head) {
+        if ((head == null) || (head.next == null)) {
+            return head;
+        }
+        ListNode n = head.next;
+        head.next = swapPairsForRecursive(head.next.next);
+        n.next = head;
+        return n;
+    }
+
+    private void swap(ListNode temp) {
         ListNode first = temp.next;
         ListNode second = first.next;
         first.next = second.next;
