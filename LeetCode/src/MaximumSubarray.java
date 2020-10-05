@@ -15,4 +15,16 @@ public class MaximumSubarray {
 
         return max;
     }
+
+    /**
+     * 더 간결한 O(n) 복잡도 코드
+     */
+    public int maxSubArray_2(int[] nums) {
+        int max = nums[0], end = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            end = Math.max(end + nums[i], nums[i]);
+            max = Math.max(max, end);
+        }
+        return max;
+    }
 }
