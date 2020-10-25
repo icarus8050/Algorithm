@@ -10,7 +10,7 @@ public class NextPermutation {
 
         if (i >= 0) {
             int j = nums.length - 1;
-            while (i < j && nums[i] >= nums[j]) j--;
+            while (nums[i] >= nums[j]) j--;
             swap(nums, i, j);
         }
 
