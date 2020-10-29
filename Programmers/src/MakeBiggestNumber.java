@@ -1,18 +1,25 @@
+import java.util.Stack;
+
+/**
+ * 큰 수 만들기 (https://programmers.co.kr/learn/courses/30/lessons/42883)
+ */
 public class MakeBiggestNumber {
     public String solution(String number, int k) {
-        StringBuilder sb = new StringBuilder(number);
+        StringBuilder sb = new StringBuilder();
+        Stack<Character> stack = new Stack<>();
 
-        while (k-- > 0) {
-            int size = sb.length();
-
-            for (int i = 0; i < size - 1; i++) {
-                if (sb.charAt(i + 1) > sb.charAt(i)) {
-                    sb.deleteCharAt(i);
-                    break;
-                }
-                if (i == size - 2)
-                    sb.deleteCharAt(size - 1);
+        int size = number.length();
+        int resultSize = size - k;
+        for (int i = 0; i < size; i++) {
+            char c = number.charAt(i);
+            while (!stack.isEmpty() && stack.peek() < c && k-- > 0) {
+                stack.pop();
             }
+            stack.push(c);
+        }
+
+        for (int i = 0; i < resultSize; i++) {
+            sb.append(stack.get(i));
         }
 
         return sb.toString();
