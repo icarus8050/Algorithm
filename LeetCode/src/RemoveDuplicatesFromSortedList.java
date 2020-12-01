@@ -18,6 +18,12 @@ public class RemoveDuplicatesFromSortedList {
         return head;
     }
 
+    public ListNode deleteDuplicates_2(ListNode head) {
+        if (head == null || head.next == null) return head;
+        head.next = deleteDuplicates_2(head.next);
+        return head.val == head.next.val ? head.next : head;
+    }
+
      public static class ListNode {
          int val;
          ListNode next;
