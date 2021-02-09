@@ -18,11 +18,7 @@ public class HandOfStraights {
         TreeMap<Integer, Integer> map = new TreeMap<>();
 
         for (int i : hand) {
-            if (map.containsKey(i)) {
-                map.put(i, map.get(i) + 1);
-            } else {
-                map.put(i, 1);
-            }
+            map.put(i, map.getOrDefault(i, 0) + 1);
         }
 
         while (!map.isEmpty()) {
@@ -44,6 +40,26 @@ public class HandOfStraights {
 
                 if (entry.getValue() - 1 != 0) {
                     map.put(entry.getKey(), entry.getValue() - 1);
+                }
+            }
+        }
+
+        return true;
+    }
+
+    public static boolean awesomeSolve(int[] hand, int W) {
+        Map<Integer, Integer> map = new TreeMap<>();
+        for (int i : hand) {
+            map.put(i, map.getOrDefault(i, 0) + 1);
+        }
+
+        for (Integer key : map.keySet()) {
+            if (map.get(key) > 0) {
+                for (int i = W - 1; i >= 0; i--) {
+                    if (map.getOrDefault(key + i, 0) < map.get(key)) {
+                        return false;
+                    }
+                    map.put(key + i, map.get(key + i) - map.get(key));
                 }
             }
         }
