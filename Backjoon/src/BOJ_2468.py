@@ -3,9 +3,6 @@
 import sys
 from collections import deque
 
-dx = [-1, 0, 1, 0]
-dy = [0, -1, 0, 1]
-
 n = int(sys.stdin.readline())
 area = [[0 for _ in range(n)] for _ in range(n)]
 heightSet = set()
@@ -29,14 +26,23 @@ for rain in heightSet:
                 queue.append((j, i))
 
                 while (queue):
-                    pos = queue.popleft()
-                    for d in range(4):
-                        nx = pos[0] + dx[d]
-                        ny = pos[1] + dy[d]
+                    x, y = queue.popleft()
 
-                        if (0 <= nx < n and 0 <= ny < n) and not visited[ny][nx] and area[ny][nx] > rain:
-                            visited[ny][nx] = True
-                            queue.append((nx, ny))
+                    if x > 0 and not visited[y][x - 1] and area[y][x - 1] > rain:
+                        visited[y][x - 1] = True
+                        queue.append((x - 1, y))
+
+                    if x < n - 1 and not visited[y][x + 1] and area[y][x + 1] > rain:
+                        visited[y][x + 1] = True
+                        queue.append((x + 1, y))
+
+                    if y > 0 and not visited[y - 1][x] and area[y - 1][x] > rain:
+                        visited[y - 1][x] = True
+                        queue.append((x, y - 1))
+
+                    if y < n - 1 and not visited[y + 1][x] and area[y + 1][x] > rain:
+                        visited[y + 1][x] = True
+                        queue.append((x, y + 1))
 
                 areaCount += 1
 
