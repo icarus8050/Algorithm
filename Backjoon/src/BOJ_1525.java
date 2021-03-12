@@ -11,6 +11,8 @@ public class BOJ_1525 {
 
     static final String SUCCESS = "123456780";
     static int[] d = {-1, -3, 1, 3};
+    static Set<String> visited = new HashSet<>();
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -22,47 +24,57 @@ public class BOJ_1525 {
         }
         String s = builder.toString();
 
-        Set<String> visited = new HashSet<>();
-        Queue<Pair> queue = new LinkedList<>();
-
-        visited.add(s);
-        queue.add(new Pair(s, s.indexOf("0"), 0));
-        int ans = -1;
-
-        while (!queue.isEmpty()) {
-            Pair current = queue.poll();
-
-            if (current.position.equals(SUCCESS)) {
-                ans = current.ans;
-                break;
-            }
-
-            for (int i = 0; i < 4; i++) {
-                int nextBlank = current.blank + d[i];
-
-                if (nextBlank < 0 || nextBlank >= 9) {
-                    continue;
-                }
-
-                String nextPair = swap(current.position, current.blank, nextBlank);
-                if (!visited.contains(nextPair)) {
-                    visited.add(nextPair);
-                    queue.add(new Pair(nextPair, nextBlank, current.ans + 1));
-                }
-            }
+        if (s.equals(SUCCESS)) {
+            bw.write(0 + "\n");
+        } else {
+            bw.write(bfs(s) + "\n");
         }
 
-        bw.write(ans + "\n");
         bw.flush();
         br.close();
         bw.close();
     }
 
-    static String swap(String s, int blankIndex, int nextBlankIndex) {
-        char[] chars = s.toCharArray();
-        chars[blankIndex] = chars[nextBlankIndex];
-        chars[nextBlankIndex] = '0';
-        return new String(chars);
+    static int bfs(String s) {
+        Queue<Pair> queue = new LinkedList<>();
+
+        visited.add(s);
+        queue.add(new Pair(s, s.indexOf("0"), 0));
+
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+
+            for (int t = 0; t < size; t++) {
+                Pair current = queue.poll();
+
+                if (current.position.equals(SUCCESS)) {
+                    return current.ans;
+                }
+
+                for (int i = 0; i < 4; i++) {
+                    int nextBlank = current.blank + d[i];
+
+                    if (nextBlank < 0 || nextBlank >= 9) {
+                        continue;
+                    }
+
+                    String nextPair = swap(current.position, current.blank, nextBlank);
+                    if (!visited.contains(nextPair)) {
+                        visited.add(nextPair);
+                        queue.add(new Pair(nextPair, nextBlank, current.ans + 1));
+                    }
+                }
+            }
+        }
+
+        return -1;
+    }
+
+    static String swap(String s, int a, int b) {
+        StringBuilder sb = new StringBuilder(s);
+        sb.setCharAt(a, s.charAt(b));
+        sb.setCharAt(b, s.charAt(a));
+        return sb.toString();
     }
 
     static class Pair {
