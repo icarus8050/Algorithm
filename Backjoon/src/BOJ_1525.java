@@ -10,7 +10,8 @@ import java.util.*;
 public class BOJ_1525 {
 
     static final String SUCCESS = "123456780";
-    static int[] d = {-1, -3, 1, 3};
+    static int[] dx = {-1, 0, 1, 0};
+    static int[] dy = {0, -1, 0, 1};
     static Set<String> visited = new HashSet<>();
 
     public static void main(String[] args) throws Exception {
@@ -52,16 +53,17 @@ public class BOJ_1525 {
                 }
 
                 for (int i = 0; i < 4; i++) {
-                    int nextBlank = current.blank + d[i];
+                    int curX = current.blank / 3;
+                    int curY = current.blank % 3;
+                    int nextX = curX + dx[i];
+                    int nextY = curY + dy[i];
 
-                    if (nextBlank < 0 || nextBlank >= 9) {
-                        continue;
-                    }
-
-                    String nextPair = swap(current.position, current.blank, nextBlank);
-                    if (!visited.contains(nextPair)) {
-                        visited.add(nextPair);
-                        queue.add(new Pair(nextPair, nextBlank, current.ans + 1));
+                    if ((nextX >= 0 && nextX < 3) && (nextY >= 0 && nextY < 3)) {
+                        String nextPair = swap(current.position, current.blank, nextX * 3 + nextY);
+                        if (!visited.contains(nextPair)) {
+                            visited.add(nextPair);
+                            queue.add(new Pair(nextPair, nextX * 3 + nextY, current.ans + 1));
+                        }
                     }
                 }
             }
